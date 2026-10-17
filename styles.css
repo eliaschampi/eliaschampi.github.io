@@ -45,7 +45,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: Manrope, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -105,7 +105,7 @@ button {
 }
 .mono {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 1.5;
@@ -166,23 +166,18 @@ button {
   letter-spacing: -4px;
   padding-right: 4px;
 }
-.small-dot {
-  font-size: 11px;
-  align-self: flex-start;
-  margin-left: -6px;
-  margin-top: 4px;
-}
 .site-header nav {
   display: flex;
   align-items: center;
   gap: 38px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 .site-header nav a {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 14px;
 }
 .site-header nav a > span:not([data-i18n]) {
   font-family: var(--mono);
@@ -209,26 +204,6 @@ button {
 }
 .hero {
   padding-top: 38px;
-}
-.hero-meta {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 32px;
-  color: #686d5e;
-}
-.hero-meta > span:first-child {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.status-dot {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #6c893a;
-  box-shadow: 0 0 0 3px #6c893a15;
-  flex: none;
 }
 .hero-grid {
   display: grid;
@@ -258,27 +233,28 @@ h1 {
   line-height: 1;
 }
 .hero-copy > p {
-  max-width: 390px;
-  line-height: 1.8;
+  max-width: 440px;
+  line-height: 1.75;
   margin-top: 30px;
   color: #626759;
-  font-size: 14px;
+  font-size: 16px;
 }
 .hero-actions {
   display: flex;
   gap: 28px;
   align-items: center;
   margin-top: 28px;
+  flex-wrap: wrap;
 }
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 44px;
-  min-height: 49px;
+  gap: 28px;
+  min-height: 52px;
   padding: 13px 20px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   transition:
     background 0.2s,
@@ -300,7 +276,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 25px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   border-bottom: 1px solid #9ea38f;
   padding: 5px 0;
@@ -333,23 +309,6 @@ h1 {
   mask-image: radial-gradient(ellipse at center, #000, transparent 90%);
   z-index: -1;
 }
-.art-top,
-.art-bottom {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  left: 26px;
-  right: 26px;
-  font-size: 8px;
-  color: #6e795e;
-  letter-spacing: 0.1em;
-}
-.art-top {
-  top: 24px;
-}
-.art-bottom {
-  bottom: 24px;
-}
 .art-orbit {
   position: absolute;
   border: 1px solid #a1ae8e55;
@@ -364,28 +323,6 @@ h1 {
 .orbit-two {
   width: 355px;
   height: 355px;
-}
-.code-note {
-  position: absolute;
-  top: 13%;
-  right: 10%;
-  background: #30352b;
-  color: #e6e8d9;
-  border-radius: 8px;
-  transform: rotate(8deg);
-  padding: 17px 30px 22px 18px;
-  line-height: 1.9;
-  font-size: 9px;
-  box-shadow: 0 15px 35px #30352b1a;
-}
-.code-comment {
-  color: #a3ae96;
-}
-.code-purple {
-  color: #d7c6ed;
-}
-.code-green {
-  color: #d2ed86;
 }
 .playground {
   position: absolute;
@@ -403,11 +340,11 @@ h1 {
   transform: rotate(-4deg);
 }
 .playground-heading {
-  padding: 13px 17px;
+  padding: 15px 18px;
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   border-bottom: 1px solid #ebede3;
 }
@@ -423,11 +360,6 @@ h1 {
 }
 .playground-body {
   padding: 25px 25px 20px;
-}
-.overline {
-  font-size: 7px;
-  color: #7c836f;
-  letter-spacing: 0.06em;
 }
 .playground h2 {
   font-size: clamp(27px, 3.5vw, 50px);
@@ -487,8 +419,8 @@ h1 {
   gap: 7px;
 }
 .swatch {
-  width: 23px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   border: 3px solid #fdfdf8;
   border-radius: 50%;
   box-shadow: 0 0 0 1px transparent;
@@ -504,19 +436,6 @@ h1 {
 .swatch[aria-pressed="true"] {
   box-shadow: 0 0 0 1px #778360;
 }
-.craft-label {
-  position: absolute;
-  bottom: 6%;
-  left: 6%;
-  font-size: 8px;
-  transform: rotate(-7deg);
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.sparkle {
-  font-size: 22px;
-}
 .floating-tag {
   position: absolute;
   bottom: 21%;
@@ -524,7 +443,7 @@ h1 {
   background: #d2ed86;
   border-radius: 4px;
   padding: 7px 12px;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   transform: rotate(5deg);
   box-shadow: 0 5px 16px #22331114;
@@ -547,20 +466,22 @@ h1 {
   justify-content: space-between;
 }
 .stack-strip > .mono {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .stack-strip ul {
   display: flex;
-  gap: 34px;
+  gap: 18px 26px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .stack-strip li {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: -0.5px;
 }
 .tech-icon {
@@ -592,21 +513,17 @@ h1 {
   color: var(--paper);
   padding: 0 2px;
 }
-.strip-note {
-  font-size: 9px;
-  color: var(--muted);
-  line-height: 1.6;
-  text-align: right;
-}
 .work-section {
   padding: 104px 0 100px;
 }
 .section-kicker {
   display: flex;
   justify-content: space-between;
-  color: #727968;
-  font-size: 9px;
+  color: #59624d;
+  font-size: 13px;
   margin-bottom: 27px;
+  letter-spacing: 0;
+  text-transform: none;
 }
 .section-heading {
   display: flex;
@@ -626,16 +543,18 @@ section h2 {
 }
 .project-filters {
   display: flex;
-  gap: 7px;
+  gap: 8px;
   margin-bottom: 35px;
+  flex-wrap: wrap;
 }
 .filter {
   background: transparent;
-  padding: 8px 17px;
+  padding: 10px 16px;
   border-radius: 24px;
   border: 1px solid var(--line);
-  font-size: 11px;
+  font-size: 13px;
   transition: background 0.2s;
+  min-height: 44px;
 }
 .filter[aria-pressed="true"] {
   background: var(--ink);
@@ -654,7 +573,7 @@ section h2 {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 45px 28px;
+  gap: 52px 32px;
 }
 .project[hidden] {
   display: none;
@@ -673,14 +592,6 @@ section h2 {
 .project-visual:hover > div {
   transform: translateY(-5px);
 }
-.visual-label {
-  position: absolute;
-  left: 25px;
-  top: 23px;
-  font-size: 8px;
-  color: inherit;
-  opacity: 0.8;
-}
 .visual-arrow {
   position: absolute;
   right: 23px;
@@ -697,16 +608,6 @@ section h2 {
 }
 .project-visual:hover .visual-arrow {
   transform: rotate(45deg);
-}
-.visual-foot {
-  position: absolute;
-  left: 25px;
-  right: 25px;
-  bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 7px;
-  opacity: 0.75;
 }
 .lumi-visual {
   background: #e2dcef;
@@ -753,7 +654,7 @@ section h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 13px;
   margin-bottom: 13px;
 }
 .widget-top > span:last-child {
@@ -769,36 +670,13 @@ section h2 {
   color: #bbb1ca;
 }
 .widget-options > span {
-  padding: 3px 10px;
+  padding: 4px 9px;
+  font-size: 11px;
 }
 .widget-options .active {
   background: #d0b9ed;
   color: #3e2c52;
   border-radius: 3px;
-}
-.widget-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 0;
-  font-size: 8px;
-  color: #d3cadf;
-}
-.widget-row i {
-  width: 21px;
-  height: 12px;
-  border-radius: 8px;
-  background: #c6afe8;
-  position: relative;
-}
-.widget-row i:after {
-  content: "";
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #342b41;
 }
 .widget-chart {
   height: 37px;
@@ -829,126 +707,14 @@ section h2 {
   background: #e9e2f2;
   padding: 7px 16px;
   border-radius: 20px;
-  font-size: 10px;
+  font-size: 12px;
   display: flex;
   gap: 23px;
   transform: rotate(-8deg);
 }
-.lumi-pill.secondary {
-  font-size: 9px;
-  left: 0;
-  bottom: -2%;
-  transform: rotate(-3deg);
-  border-color: #d0b6d4;
-  background: #ead1e6;
-  color: #6d416d;
-}
 .aeduca-visual {
   background: #dfe6d8;
   color: #526345;
-}
-.school-window {
-  position: absolute;
-  left: 11%;
-  right: 7%;
-  top: 23%;
-  height: 211px;
-  display: flex;
-  background: #f8f9f4;
-  border-radius: 7px;
-  box-shadow: 0 20px 30px #4b5d3f20;
-  transform: rotate(-5deg);
-  overflow: hidden;
-  border: 1px solid #fff8;
-}
-.project-visual:hover > .school-window {
-  transform: rotate(-3deg) translateY(-5px);
-}
-.school-window aside {
-  padding: 17px 10px;
-  width: 97px;
-  background: #edf0e5;
-  flex: none;
-}
-.school-window aside b {
-  font-size: 17px;
-  color: #5e7143;
-  letter-spacing: -1px;
-  display: block;
-  margin-bottom: 14px;
-}
-.school-window aside b span {
-  font-size: 12px;
-  letter-spacing: -0.7px;
-}
-.school-window aside i {
-  font-size: 8px;
-  font-style: normal;
-  display: block;
-  padding: 4px 3px;
-  margin-block: 2px;
-  white-space: nowrap;
-  color: #7c856d;
-}
-.school-window aside i > span {
-  margin-left: 5px;
-}
-.school-window aside i.current {
-  background: #dce5ce;
-  color: #465f29;
-  border-radius: 3px;
-}
-.school-main {
-  padding: 19px 17px;
-  flex: 1;
-  min-width: 0;
-}
-.school-eyebrow {
-  font: 5px var(--mono);
-  letter-spacing: 0.1em;
-  color: #81916c;
-}
-.school-main h4 {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  margin: 4px 0 12px;
-}
-.school-metrics {
-  display: flex;
-  gap: 7px;
-}
-.school-metrics > div {
-  background: #edf0e6;
-  border: 1px solid #e4e8dc;
-  border-radius: 4px;
-  font-size: 6px;
-  flex: 1;
-  padding: 7px;
-  color: #8a937f;
-}
-.school-metrics b {
-  display: block;
-  font-size: 8px;
-  margin-top: 3px;
-  color: #677355;
-  font-weight: 500;
-}
-.school-graph {
-  border: 1px solid #e5e8de;
-  border-radius: 4px;
-  margin-top: 9px;
-  height: 77px;
-  overflow: hidden;
-  padding: 6px 10px;
-}
-.school-graph > span {
-  font-size: 7px;
-}
-.school-graph svg {
-  width: 100%;
-  height: 50px;
-  display: block;
 }
 .omr-visual {
   background: #e7e5db;
@@ -970,7 +736,7 @@ section h2 {
   box-shadow: 0 12px 28px #615d4b1a;
 }
 .answer-sheet > .mono {
-  font-size: 5px;
+  font-size: 10px;
 }
 .answer-sheet h4 {
   font-size: 19px;
@@ -989,7 +755,7 @@ section h2 {
   gap: 8px;
 }
 .answer-rows span {
-  font: 7px var(--mono);
+  font: 10px var(--mono);
   color: #858576;
 }
 .answer-rows i {
@@ -1060,12 +826,6 @@ section h2 {
   box-shadow: 0 10px 20px #38492b25;
   transform: rotate(5deg);
 }
-.omr-result .status-dot {
-  width: 4px;
-  height: 4px;
-  margin-right: 3px;
-  background: #c4e48f;
-}
 .result-code {
   font-size: 23px;
   display: block;
@@ -1101,7 +861,7 @@ section h2 {
 }
 .rust-console {
   position: absolute;
-  width: 210px;
+  width: 225px;
   right: 0;
   top: 21%;
   background: #20261f;
@@ -1110,7 +870,7 @@ section h2 {
   transform: rotate(7deg);
   box-shadow: 0 18px 30px #1118;
   color: #a0b18e;
-  font-size: 8px;
+  font-size: 11px;
   line-height: 2;
 }
 .rust-console > div {
@@ -1134,14 +894,14 @@ section h2 {
 }
 .rust-console p b {
   font-weight: 400;
-  font-size: 7px;
+  font-size: 10px;
   color: #dfebca;
 }
 .console-note {
   display: block;
   padding: 0 12px 13px;
   color: #6f8560;
-  font-size: 7px;
+  font-size: 11px;
 }
 .report-sheet {
   position: absolute;
@@ -1179,68 +939,29 @@ section h2 {
   gap: 15px;
 }
 .project-info h3 {
-  font-size: 22px;
-  letter-spacing: -0.8px;
+  font-size: 28px;
+  letter-spacing: -1px;
 }
 .project-info p {
-  font-size: 12px;
-  color: #7b806f;
-  margin-top: 2px;
-}
-.project-number {
-  font-size: 9px;
-  color: #929982;
-  padding-top: 6px;
+  font-size: 15px;
+  color: #626a58;
+  margin-top: 9px;
+  line-height: 1.7;
+  max-width: 470px;
 }
 .tags {
   display: flex;
-  gap: 6px;
+  gap: 0;
   flex-wrap: wrap;
-  margin-top: 13px;
+  margin-top: 14px;
 }
 .tags > span {
-  border: 1px solid var(--line);
-  color: #727968;
-  font-size: 9px;
-  line-height: 1.4;
-  padding: 5px 9px;
-  border-radius: 4px;
-}
-.project-detail {
-  margin-top: 17px;
+  border: 0;
+  color: #68715d;
   font-size: 12px;
-  color: #6b7360;
-}
-.project-detail summary {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 11px 0;
-  border-top: 1px solid var(--line);
-  list-style: none;
-  color: #4f5841;
-  font-size: 10px;
-}
-.project-detail summary::-webkit-details-marker {
-  display: none;
-}
-.project-detail summary > [aria-hidden="true"] {
-  font-size: 16px;
-  line-height: 1;
-}
-.project-detail[open] summary > [aria-hidden="true"] {
-  transform: rotate(45deg);
-}
-.project-detail p {
-  padding: 0 0 12px;
-  max-width: 95%;
-  line-height: 1.8;
-}
-.project-detail > a {
-  font-size: 10px;
-  border-bottom: 1px solid #b2ba9f;
-  display: inline-block;
-  margin-bottom: 10px;
+  line-height: 1.7;
+  padding: 0;
+  border-radius: 0;
 }
 .compact-visual {
   display: flex;
@@ -1250,9 +971,6 @@ section h2 {
   padding: 37px 28px;
   border-radius: 8px;
   min-height: 194px;
-}
-.faztore-visual {
-  background: #e8e9e1;
 }
 .naipe-visual {
   background: #ece5dc;
@@ -1268,7 +986,7 @@ section h2 {
   flex: none;
 }
 .compact-visual h3 {
-  font-size: 25px;
+  font-size: 28px;
   letter-spacing: -1px;
   line-height: 1.5;
 }
@@ -1277,8 +995,8 @@ section h2 {
   color: #818775;
 }
 .compact-visual p {
-  font-size: 10px;
-  color: #818775;
+  font-size: 14px;
+  color: #646d59;
   margin-top: 2px;
   line-height: 1.7;
 }
@@ -1363,15 +1081,15 @@ section h2 {
   color: #747b69;
 }
 .about-copy .large-copy {
-  font-size: 23px;
+  font-size: 26px;
   line-height: 1.5;
   letter-spacing: -0.65px;
   color: #414937;
   margin-bottom: 22px;
 }
 .about-copy > p:not(.large-copy) {
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.8;
   margin: 0 0 16px;
   max-width: 485px;
 }
@@ -1392,11 +1110,11 @@ section h2 {
   letter-spacing: -1px;
 }
 .about-facts > div > span {
-  font-size: 9px;
+  font-size: 13px;
   color: #818a73;
 }
 .about-copy > .text-link {
-  font-size: 11px;
+  font-size: 14px;
   color: #455536;
 }
 .experience-section {
@@ -1408,7 +1126,7 @@ section h2 {
   padding-top: 36px;
 }
 .experience-label .mono {
-  font-size: 8px;
+  font-size: 12px;
   color: #7a8669;
 }
 .experience-label > p {
@@ -1420,8 +1138,8 @@ section h2 {
 }
 .experience-row {
   display: grid;
-  grid-template-columns: 102px 1fr auto;
-  gap: 20px;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
   align-items: start;
   padding: 22px 0;
   border-bottom: 1px solid #d3d9c9;
@@ -1430,19 +1148,20 @@ section h2 {
   padding-top: 0;
 }
 .experience-row > .mono {
-  font-size: 8px;
+  font-size: 12px;
   color: #82906f;
   padding-top: 6px;
 }
 .experience-row h3 {
-  font-size: 14px;
+  font-size: 16px;
   color: #4b5940;
   font-weight: 500;
 }
 .experience-row p {
-  font-size: 10px;
+  font-size: 13px;
   color: #859077;
   margin-top: 3px;
+  line-height: 1.7;
 }
 .experience-row .experience-kind {
   font-size: 6px;
@@ -1518,7 +1237,7 @@ section h2 {
 .social-links {
   display: flex;
   gap: 30px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .social-links a:hover {
   color: #6d8c38;
@@ -1529,7 +1248,7 @@ section h2 {
   gap: 20px;
   border-top: 1px solid var(--line);
   padding-block: 25px;
-  font-size: 7px;
+  font-size: 11px;
   color: #838b75;
 }
 .site-footer a:hover {
@@ -1563,6 +1282,7 @@ section h2 {
   }
   .site-header nav {
     gap: 24px;
+    font-size: 14px;
   }
   .hero-grid {
     gap: 28px;
@@ -1571,30 +1291,33 @@ section h2 {
     aspect-ratio: 1/1.32;
   }
   .hero-copy > p {
-    font-size: 12px;
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 440px;
   }
   .hero-actions {
     gap: 20px;
+    flex-wrap: wrap;
   }
   .hero-actions .text-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .button {
-    gap: 25px;
-    font-size: 11px;
+    gap: 28px;
+    font-size: 14px;
+    min-height: 52px;
   }
   .stack-strip {
     gap: 20px;
   }
   .stack-strip ul {
-    gap: 20px;
+    gap: 18px 26px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   .stack-strip li {
-    font-size: 12px;
+    font-size: 14px;
     gap: 6px;
-  }
-  .strip-note {
-    display: none;
   }
   .project-visual {
     height: 300px;
@@ -1614,16 +1337,15 @@ section h2 {
   }
   .lumi-pill {
     bottom: 6%;
-  }
-  .lumi-pill.secondary {
-    bottom: -15%;
+    font-size: 12px;
   }
   .rust-mark {
     font-size: 140px;
   }
   .rust-console {
-    width: 185px;
+    width: 225px;
     top: 26%;
+    font-size: 11px;
   }
   .report-sheet {
     bottom: -5%;
@@ -1644,43 +1366,6 @@ section h2 {
   .result-code {
     font-size: 19px;
   }
-  .school-window {
-    left: 7%;
-    right: 4%;
-    top: 25%;
-    height: 186px;
-  }
-  .school-main {
-    padding: 12px;
-  }
-  .school-main h4 {
-    font-size: 11px;
-  }
-  .school-window aside {
-    width: 77px;
-    padding: 14px 8px;
-  }
-  .school-window aside i {
-    font-size: 6px;
-  }
-  .school-window aside b span {
-    font-size: 10px;
-  }
-  .school-metrics b {
-    font-size: 6px;
-  }
-  .school-graph {
-    height: 62px;
-  }
-  .school-graph svg {
-    height: 38px;
-  }
-  .visual-foot {
-    font-size: 6px;
-  }
-  .visual-label {
-    font-size: 7px;
-  }
   .about-grid {
     gap: 45px;
   }
@@ -1688,8 +1373,8 @@ section h2 {
     font-size: 35px;
   }
   .experience-row {
-    grid-template-columns: 88px 1fr;
-    gap: 10px;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
   }
   .experience-kind {
     display: none;
@@ -1706,10 +1391,12 @@ section h2 {
     margin-inline: 8px;
   }
   .compact-visual p {
-    font-size: 9px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #646d59;
   }
   .compact-visual h3 {
-    font-size: 23px;
+    font-size: 28px;
   }
   .compact-visual .mono {
     font-size: 6px;
@@ -1760,12 +1447,13 @@ section h2 {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
+    font-size: 14px;
   }
   .site-header nav.is-open {
     display: flex;
   }
   .site-header nav a {
-    font-size: 16px;
+    font-size: 14px;
     padding: 13px 0;
     justify-content: space-between;
   }
@@ -1779,15 +1467,6 @@ section h2 {
   }
   .hero {
     padding-top: 25px;
-  }
-  .hero-meta {
-    margin-bottom: 28px;
-    font-size: 7px;
-    gap: 10px;
-  }
-  .hero-meta > span:last-child {
-    font-size: 7px;
-    white-space: nowrap;
   }
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1810,20 +1489,23 @@ section h2 {
     bottom: 0.08em;
   }
   .hero-copy > p {
-    font-size: 13px;
-    max-width: 390px;
+    font-size: 16px;
+    max-width: 440px;
     margin-top: 24px;
+    line-height: 1.75;
   }
   .hero-actions {
     margin-top: 24px;
     gap: 28px;
+    flex-wrap: wrap;
   }
   .hero-actions .text-link {
-    font-size: 11px;
+    font-size: 14px;
   }
   .button {
-    font-size: 11px;
-    gap: 32px;
+    font-size: 14px;
+    gap: 28px;
+    min-height: 52px;
   }
   .hero-art {
     aspect-ratio: 1/1.02;
@@ -1839,21 +1521,10 @@ section h2 {
   .playground h2 {
     font-size: 44px;
   }
-  .code-note {
-    top: 10%;
-    font-size: 9px;
-    right: 15%;
-  }
-  .craft-label {
-    bottom: 7%;
-    left: 8%;
-  }
   .floating-tag {
     bottom: 17%;
     right: 7%;
-  }
-  .art-bottom {
-    bottom: 20px;
+    font-size: 11px;
   }
   .stack-strip {
     margin-top: 34px;
@@ -1864,15 +1535,16 @@ section h2 {
   }
   .stack-strip ul {
     width: 100%;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 18px 26px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
   .stack-strip li {
-    font-size: 10px;
+    font-size: 14px;
     gap: 6px;
   }
   .stack-strip > .mono {
-    font-size: 8px;
+    font-size: 12px;
   }
   .tech-icon {
     font-size: 15px;
@@ -1893,8 +1565,11 @@ section h2 {
     padding: 64px 0;
   }
   .section-kicker {
-    font-size: 7px;
+    font-size: 13px;
     margin-bottom: 24px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #59624d;
   }
   .section-kicker > span:last-child {
     font-size: 6px;
@@ -1911,30 +1586,21 @@ section h2 {
     font-size: 11px;
   }
   .project-filters {
-    gap: 5px;
+    gap: 8px;
     flex-wrap: wrap;
     margin-bottom: 26px;
   }
   .filter {
-    font-size: 10px;
-    padding: 8px 12px;
+    font-size: 13px;
+    padding: 10px 16px;
+    min-height: 44px;
   }
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 33px;
+    gap: 52px 32px;
   }
   .project-visual {
     height: 345px;
-  }
-  .visual-label {
-    font-size: 7px;
-    left: 22px;
-    top: 20px;
-  }
-  .visual-foot {
-    font-size: 6px;
-    left: 22px;
-    right: 22px;
   }
   .lumi-composition,
   .omr-composition,
@@ -1953,37 +1619,7 @@ section h2 {
   }
   .lumi-pill {
     bottom: 8%;
-  }
-  .lumi-pill.secondary {
-    bottom: -9%;
-  }
-  .school-window {
-    left: 9%;
-    right: 5%;
-    height: 212px;
-    top: 25%;
-  }
-  .school-main {
-    padding: 17px 12px;
-  }
-  .school-main h4 {
-    font-size: 13px;
-  }
-  .school-window aside {
-    width: 93px;
-    padding: 16px 10px;
-  }
-  .school-window aside i {
-    font-size: 7px;
-  }
-  .school-metrics b {
-    font-size: 7px;
-  }
-  .school-graph {
-    height: 75px;
-  }
-  .school-graph svg {
-    height: 50px;
+    font-size: 12px;
   }
   .answer-sheet {
     left: 7%;
@@ -2006,26 +1642,30 @@ section h2 {
     font-size: 165px;
   }
   .rust-console {
-    width: 210px;
+    width: 225px;
     top: 23%;
+    font-size: 11px;
   }
   .report-sheet {
     bottom: 0;
   }
   .project-info h3 {
-    font-size: 21px;
+    font-size: 28px;
+    letter-spacing: -1px;
   }
   .project-info p {
-    font-size: 11px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #626a58;
+    margin-top: 9px;
+    max-width: 470px;
   }
   .project-info {
     margin-top: 18px;
   }
   .tags {
-    margin-top: 10px;
-  }
-  .project-detail {
     margin-top: 14px;
+    gap: 0;
   }
   .compact-visual {
     min-height: 175px;
@@ -2033,10 +1673,12 @@ section h2 {
     padding: 25px;
   }
   .compact-visual h3 {
-    font-size: 26px;
+    font-size: 28px;
   }
   .compact-visual p {
-    font-size: 10px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #646d59;
   }
   .compact-visual .mono {
     font-size: 7px;
@@ -2063,11 +1705,12 @@ section h2 {
     display: none;
   }
   .about-copy .large-copy {
-    font-size: 21px;
+    font-size: 26px;
   }
   .about-copy > p:not(.large-copy) {
-    font-size: 12px;
+    font-size: 16px;
     max-width: 100%;
+    line-height: 1.8;
   }
   .about-facts {
     gap: 40px;
@@ -2076,7 +1719,7 @@ section h2 {
     font-size: 27px;
   }
   .about-facts > div > span {
-    font-size: 8px;
+    font-size: 13px;
   }
   .experience-section {
     grid-template-columns: 1fr;
@@ -2089,18 +1732,19 @@ section h2 {
     margin-top: 10px;
   }
   .experience-row {
-    grid-template-columns: 83px 1fr;
-    gap: 12px;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
     padding-block: 20px;
   }
   .experience-row h3 {
-    font-size: 12px;
+    font-size: 16px;
   }
   .experience-row p {
-    font-size: 9px;
+    font-size: 13px;
+    line-height: 1.7;
   }
   .experience-row > .mono {
-    font-size: 7px;
+    font-size: 12px;
   }
   .contact-section {
     padding: 58px 0 40px;
@@ -2135,11 +1779,11 @@ section h2 {
     margin-left: 17px;
   }
   .social-links {
-    font-size: 10px;
+    font-size: 14px;
     gap: 27px;
   }
   .site-footer {
-    font-size: 6px;
+    font-size: 11px;
     flex-wrap: wrap;
     gap: 14px;
     padding-block: 23px;
@@ -2163,12 +1807,6 @@ section h2 {
   .headline-star {
     font-size: 34px;
   }
-  .hero-meta {
-    font-size: 6px;
-  }
-  .hero-meta > span:last-child {
-    font-size: 6px;
-  }
   .hero-art {
     aspect-ratio: 1/1.13;
   }
@@ -2182,28 +1820,15 @@ section h2 {
   .playground-body {
     padding: 18px 20px;
   }
-  .code-note {
-    font-size: 8px;
-    right: 8%;
-    top: 12%;
-  }
-  .art-top,
-  .art-bottom {
-    left: 18px;
-    right: 18px;
-    font-size: 6px;
-  }
   .playground-heading {
-    font-size: 9px;
+    font-size: 13px;
+    padding: 15px 18px;
   }
   .floating-tag {
-    font-size: 7px;
-  }
-  .craft-label {
-    font-size: 6px;
+    font-size: 11px;
   }
   .stack-strip li {
-    font-size: 9px;
+    font-size: 14px;
     gap: 4px;
   }
   .lumi-composition,
@@ -2221,24 +1846,6 @@ section h2 {
   .project-visual {
     height: 310px;
   }
-  .school-window {
-    height: 190px;
-  }
-  .school-window aside {
-    width: 75px;
-  }
-  .school-main h4 {
-    font-size: 11px;
-  }
-  .school-metrics b {
-    font-size: 6px;
-  }
-  .school-window aside i {
-    font-size: 6px;
-  }
-  .school-graph {
-    height: 60px;
-  }
   .answer-sheet {
     width: 170px;
     height: 211px;
@@ -2255,7 +1862,8 @@ section h2 {
     font-size: 140px;
   }
   .rust-console {
-    width: 183px;
+    width: 225px;
+    font-size: 11px;
   }
   .compact-visual {
     gap: 14px;
@@ -2269,7 +1877,9 @@ section h2 {
     margin-inline: 8px;
   }
   .compact-visual p {
-    font-size: 9px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #646d59;
   }
   .contact-circle {
     width: 50px;
@@ -2326,7 +1936,7 @@ section h2 {
     display: block;
   }
   .project-grid {
-    gap: 20px;
+    gap: 52px 32px;
   }
   .project-visual {
     height: 220px;
@@ -2340,17 +1950,14 @@ section h2 {
   a {
     color: inherit;
   }
-  .project-detail {
-    display: none;
-  }
   body {
     background: white;
+    font-size: 16px;
   }
   section {
     break-inside: auto;
   }
-}
-/* Language controls and the current product collection. */
+} /* Language controls and the current product collection. */
 .header-controls {
   display: flex;
   align-items: center;
@@ -2367,10 +1974,11 @@ section h2 {
 .language-switch button {
   background: none;
   border-radius: 18px;
-  padding: 5px 9px;
+  padding: 6px 9px;
   font: 9px var(--mono);
-  min-height: 29px;
-  min-width: 33px;
+  min-height: 34px;
+  min-width: 34px;
+  font-size: 12px;
 }
 .language-switch button[aria-pressed="true"] {
   background: var(--ink);
@@ -2380,11 +1988,7 @@ section h2 {
   margin-left: auto;
   margin-right: 30px;
   gap: 25px;
-}
-.project-access {
-  font-size: 7px;
-  color: #7f876e;
-  margin-top: 10px;
+  font-size: 14px;
 }
 .store-visual {
   background: #e8e1d7;
@@ -2412,7 +2016,7 @@ section h2 {
   position: absolute;
   left: 3%;
   top: 31%;
-  font-size: 41px;
+  font-size: 40px;
   letter-spacing: -2px;
   line-height: 1.05;
   color: #695743;
@@ -2431,9 +2035,9 @@ section h2 {
   overflow: hidden;
 }
 .store-product svg {
-  height: 156px;
+  height: 100%;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 .store-product > div {
   padding: 9px 15px;
@@ -2455,13 +2059,6 @@ section h2 {
 .store-product i {
   font-style: normal;
 }
-.store-tag {
-  position: absolute;
-  left: 3%;
-  bottom: 7%;
-  font-size: 7px;
-  color: #95836d;
-}
 .tinymed-visual {
   background: #e0e7df;
 }
@@ -2480,15 +2077,6 @@ section h2 {
 .contact-heading h2 {
   font-size: clamp(46px, 5.8vw, 82px);
 }
-.craft-label {
-  display: none;
-}
-.code-note {
-  font-size: 8px;
-}
-.hero-meta {
-  font-size: 9px;
-}
 .playground h2 {
   font-size: clamp(26px, 3.1vw, 43px);
 }
@@ -2496,9 +2084,10 @@ section h2 {
   .site-header nav {
     gap: 18px;
     margin-right: 20px;
+    font-size: 14px;
   }
   .site-header nav a {
-    font-size: 11px;
+    font-size: 14px;
   }
   .header-controls {
     gap: 12px;
@@ -2509,20 +2098,18 @@ section h2 {
     right: 1%;
   }
   .store-product svg {
-    height: 135px;
+    height: 100%;
+    padding: 20px;
   }
   .store-message {
-    font-size: 35px;
+    font-size: 40px;
   }
   .store-wordmark {
     font-size: 24px;
   }
-  .store-tag {
-    font-size: 6px;
-    bottom: 1%;
-  }
   .project-filters {
     flex-wrap: wrap;
+    gap: 8px;
   }
   .playground h2 {
     font-size: 32px;
@@ -2531,22 +2118,23 @@ section h2 {
 @media (max-width: 760px) {
   .site-header nav {
     margin: 0;
+    font-size: 14px;
   }
   .header-controls {
     gap: 15px;
   }
   .language-switch button {
-    font-size: 8px;
-    padding: 3px 7px;
-    min-width: 29px;
-    min-height: 27px;
+    font-size: 12px;
+    padding: 6px 9px;
+    min-width: 34px;
+    min-height: 34px;
   }
   .menu-toggle {
     padding-left: 0;
     gap: 10px;
   }
   .menu-toggle [data-menu-label] {
-    font-size: 11px;
+    font-size: 13px;
   }
   .hero-copy h1 {
     font-size: clamp(52px, 10.5vw, 78px);
@@ -2556,24 +2144,15 @@ section h2 {
     right: 0;
     font-size: 35px;
   }
-  .hero-meta {
-    font-size: 6px;
-  }
-  .hero-meta > span:last-child {
-    font-size: 6px;
-  }
   .playground h2 {
     font-size: 34px;
   }
   .playground-body {
     padding: 20px 22px 18px;
   }
-  .playground .overline {
-    font-size: 6px;
-  }
   .playground-heading {
-    font-size: 9px;
-    padding: 11px 15px;
+    font-size: 13px;
+    padding: 15px 18px;
   }
   .hero-art {
     aspect-ratio: 1/1.07;
@@ -2584,7 +2163,7 @@ section h2 {
     left: 12%;
   }
   .floating-tag {
-    font-size: 8px;
+    font-size: 11px;
     bottom: 16%;
   }
   .store-product {
@@ -2592,30 +2171,23 @@ section h2 {
     height: 218px;
   }
   .store-product svg {
-    height: 150px;
+    height: 100%;
+    padding: 20px;
   }
   .store-message {
-    font-size: 36px;
+    font-size: 40px;
     left: 0;
   }
   .store-wordmark {
     left: 0;
   }
-  .store-tag {
-    left: 0;
-    font-size: 6px;
-    bottom: 0;
-  }
   .contact-heading h2 {
     font-size: clamp(32px, 7.6vw, 53px);
   }
   .filter {
-    padding: 8px 10px;
-    font-size: 9px;
-  }
-  .art-top,
-  .art-bottom {
-    font-size: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    min-height: 44px;
   }
 }
 @media (max-width: 390px) {
@@ -2623,7 +2195,7 @@ section h2 {
     font-size: 52px;
   }
   .site-header .wordmark {
-    font-size: 15px;
+    font-size: 16px;
     gap: 7px;
   }
   .header-controls {
@@ -2633,12 +2205,13 @@ section h2 {
     gap: 5px;
   }
   .menu-toggle [data-menu-label] {
-    font-size: 10px;
+    font-size: 13px;
   }
   .language-switch button {
-    min-width: 25px;
-    font-size: 7px;
-    padding: 3px 5px;
+    min-width: 34px;
+    font-size: 12px;
+    padding: 6px 9px;
+    min-height: 34px;
   }
   .store-product {
     width: 145px;
@@ -2646,17 +2219,14 @@ section h2 {
     right: -2%;
   }
   .store-product svg {
-    height: 130px;
+    height: 100%;
+    padding: 20px;
   }
   .store-message {
-    font-size: 30px;
+    font-size: 40px;
   }
   .store-wordmark {
     font-size: 22px;
-  }
-  .store-tag {
-    bottom: 0;
-    font-size: 5px;
   }
   .contact-heading h2 {
     font-size: 31px;
@@ -2673,15 +2243,9 @@ section h2 {
   }
   .floating-tag {
     bottom: 15%;
+    font-size: 11px;
   }
-  .hero-meta {
-    font-size: 5.5px;
-  }
-  .hero-meta > span:last-child {
-    font-size: 5.5px;
-  }
-}
-/* Coedula's connected operations, illustrated without customer data. */
+} /* Coedula's connected operations, illustrated without customer data. */
 .coedula-visual {
   background: #dce4e4;
   color: #526468;
@@ -2691,7 +2255,7 @@ section h2 {
   inset: 64px 30px 42px;
 }
 .coedula-wordmark {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   letter-spacing: -2px;
   color: #40565c;
@@ -2708,7 +2272,7 @@ section h2 {
 .coedula-panel {
   position: absolute;
   right: 4%;
-  top: 21%;
+  top: 28%;
   width: 300px;
   background: #34484b;
   border: 1px solid #f3ffff55;
@@ -2718,26 +2282,12 @@ section h2 {
   color: #b9cdca;
   overflow: hidden;
 }
-.coedula-panel-top {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #ffffff15;
-  padding: 12px 15px;
-  align-items: center;
-}
-.coedula-panel-top .mono {
-  font-size: 7px;
-}
-.coedula-panel-top i {
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-style: normal;
-}
 .coedula-system {
   position: relative;
-  height: 143px;
+  height: 150px;
   text-align: center;
   padding: 8px 17px;
+  padding-top: 13px;
 }
 .system-core {
   display: inline-grid;
@@ -2767,103 +2317,423 @@ section h2 {
   justify-content: space-between;
   gap: 10px;
   margin-top: 18px;
-  font-size: 7px;
+  font-size: 11px;
 }
 .system-modules > span {
   background: #445c5e;
-  padding: 7px 10px;
+  padding: 8px 10px;
   border-radius: 4px;
   border: 1px solid #7e989158;
   min-width: 65px;
+  font-size: 11px;
 }
 .system-result {
   display: block;
-  font-size: 7px;
+  font-size: 11px;
   margin-top: 20px;
   color: #a8c0b6;
-}
-.coedula-note {
-  position: absolute;
-  left: 0;
-  top: 66%;
-  font-size: 6px;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  color: #778d8d;
+  background: #34484b;
+  position: relative;
+  width: max-content;
+  margin-inline: auto;
+  padding: 0 6px;
 }
 @media (max-width: 1100px) {
   .coedula-panel {
-    width: 265px;
+    width: 300px;
     right: 0;
-    top: 20%;
+    top: 28%;
   }
   .coedula-wordmark {
-    font-size: 29px;
+    font-size: 40px;
     left: 1%;
     top: -4%;
   }
-  .coedula-panel-top {
-    padding: 10px 13px;
-  }
   .coedula-system {
-    height: 127px;
+    height: 150px;
+    padding-top: 13px;
   }
   .system-modules {
     gap: 4px;
-    font-size: 6px;
+    font-size: 11px;
   }
   .system-modules > span {
     min-width: 60px;
-    padding: 6px 7px;
+    padding: 8px 10px;
+    font-size: 11px;
   }
   .system-result {
     margin-top: 15px;
+    font-size: 11px;
+    background: #34484b;
+    position: relative;
+    width: max-content;
+    margin-inline: auto;
+    padding: 0 6px;
   }
 }
 @media (max-width: 760px) {
   .coedula-panel {
-    width: 280px;
+    width: 300px;
     right: 0;
-    top: 25%;
+    top: 28%;
   }
   .coedula-wordmark {
-    font-size: 33px;
+    font-size: 40px;
     top: 0;
   }
   .coedula-system {
-    height: 143px;
+    height: 150px;
+    padding-top: 13px;
   }
   .system-modules {
-    font-size: 7px;
+    font-size: 11px;
     gap: 7px;
   }
   .system-result {
     margin-top: 20px;
-  }
-  .coedula-note {
-    font-size: 5px;
+    font-size: 11px;
+    background: #34484b;
+    position: relative;
+    width: max-content;
+    margin-inline: auto;
+    padding: 0 6px;
   }
 }
 @media (max-width: 390px) {
   .coedula-panel {
-    width: 245px;
+    width: 300px;
     right: -3%;
-    top: 24%;
+    top: 28%;
   }
   .coedula-wordmark {
-    font-size: 30px;
+    font-size: 40px;
   }
   .coedula-system {
-    height: 127px;
+    height: 150px;
+    padding-top: 13px;
   }
   .system-modules {
-    font-size: 6px;
+    font-size: 11px;
     gap: 4px;
   }
   .system-result {
     margin-top: 15px;
+    font-size: 11px;
+    background: #34484b;
+    position: relative;
+    width: max-content;
+    margin-inline: auto;
+    padding: 0 6px;
   }
-  .coedula-note {
+}
+/* Readable product stories and a small, consistent set of controls. */
+.hero-role {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #657052;
+  margin-bottom: 24px;
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-bottom: 1px solid #aeb79e;
+  padding-bottom: 4px;
+}
+.project-link:hover {
+  color: #65812c;
+}
+.tags > span + span:before {
+  content: "·";
+  margin: 0 9px;
+  color: #a1aa94;
+}
+.stack-strip > span {
+  font-size: 12px;
+  color: #657052;
+  line-height: 1.6;
+}
+.hero-art .playground {
+  top: 20%;
+}
+.hero-art .floating-tag {
+  bottom: 14%;
+}
+.education-art {
+  position: absolute;
+  inset: 45px 35px 35px;
+}
+.education-wordmark {
+  font-size: 40px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #526b3e;
+}
+.education-wordmark > span {
+  font-size: 23px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+.education-card {
+  position: absolute;
+  right: 2%;
+  left: 15%;
+  top: 28%;
+  background: #f7f9f1;
+  border: 1px solid #ffffffaa;
+  border-radius: 10px;
+  padding: 20px 22px;
+  transform: rotate(-5deg);
+  box-shadow: 0 18px 30px #4b5d3f20;
+}
+.education-symbol {
+  font-size: 28px;
+  color: #91a876;
+  line-height: 1;
+}
+.education-card h4 {
+  font-size: 25px;
+  letter-spacing: -1px;
+  margin: 8px 0 18px;
+}
+.education-modules {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.education-modules > span {
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #e8eede;
+  color: #687b51;
+}
+@media (max-width: 1100px) {
+  .site-header nav {
+    gap: 17px;
+  }
+  .hero-grid {
+    gap: 28px;
+  }
+  .project-info p {
+    font-size: 15px;
+  }
+  .coedula-panel {
+    width: 280px;
+    right: 0;
+  }
+  .system-modules {
+    gap: 4px;
+  }
+  .system-modules > span {
+    padding: 7px;
+  }
+  .education-art {
+    inset: 40px 24px 28px;
+  }
+  .education-card {
+    left: 6%;
+    right: 0;
+    padding: 18px;
+  }
+  .education-card h4 {
+    font-size: 23px;
+  }
+  .store-message {
+    font-size: 35px;
+  }
+}
+@media (max-width: 760px) {
+  .site-header nav {
+    font-size: 16px;
+  }
+  .site-header nav a {
+    font-size: 16px;
+  }
+  .site-header .wordmark {
+    font-size: 16px;
+  }
+  .header-controls {
+    gap: 14px;
+  }
+  .menu-toggle [data-menu-label] {
     display: none;
+  }
+  .menu-toggle {
+    padding: 10px 0 10px 4px;
+  }
+  .language-switch button {
+    min-width: 32px;
+    min-height: 32px;
+    padding: 5px 7px;
+  }
+  .hero-role {
+    font-size: 13px;
+    margin-bottom: 22px;
+  }
+  .hero-copy > p {
+    font-size: 15px;
+  }
+  .hero-actions {
+    gap: 20px;
+  }
+  .button {
+    gap: 22px;
+    padding: 13px 18px;
+  }
+  .stack-strip {
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .stack-strip ul {
+    gap: 17px 24px;
+  }
+  .filter {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+  .section-kicker {
+    font-size: 12px;
+  }
+  .project-info h3 {
+    font-size: 27px;
+  }
+  .project-grid {
+    gap: 42px;
+  }
+  .project-link {
+    font-size: 14px;
+    margin-top: 17px;
+  }
+  .tags > span {
+    font-size: 12px;
+  }
+  .hero-art .playground {
+    top: 17%;
+    width: 76%;
+    left: 10%;
+  }
+  .playground h2 {
+    font-size: 35px;
+  }
+  .floating-tag {
+    font-size: 10px;
+  }
+  .coedula-panel {
+    width: 280px;
+    right: 0;
+    top: 28%;
+  }
+  .coedula-wordmark {
+    font-size: 38px;
+  }
+  .system-modules {
+    font-size: 11px;
+  }
+  .system-modules > span {
+    font-size: 11px;
+  }
+  .store-message {
+    font-size: 35px;
+  }
+  .education-card h4 {
+    font-size: 25px;
+  }
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .experience-row > .mono {
+    font-size: 12px;
+  }
+  .experience-row h3 {
+    font-size: 16px;
+  }
+  .experience-row p {
+    font-size: 13px;
+  }
+  .site-footer {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .compact-visual p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .hero-copy h1 {
+    font-size: 49px;
+  }
+  .hero-role {
+    font-size: 12px;
+  }
+  .hero-actions {
+    gap: 17px;
+  }
+  .button {
+    font-size: 13px;
+    gap: 17px;
+  }
+  .hero-actions .text-link {
+    font-size: 13px;
+  }
+  .coedula-panel {
+    width: 250px;
+    right: -2%;
+  }
+  .coedula-composition {
+    left: 25px;
+    right: 25px;
+  }
+  .system-modules {
+    gap: 3px;
+  }
+  .system-modules > span {
+    font-size: 10px;
+    padding: 7px 6px;
+    min-width: 60px;
+  }
+  .system-result {
+    font-size: 10px;
+  }
+  .education-art {
+    inset: 35px 23px 28px;
+  }
+  .education-card h4 {
+    font-size: 23px;
+  }
+  .education-modules {
+    gap: 5px;
+  }
+  .education-modules > span {
+    font-size: 10px;
+  }
+  .store-message {
+    font-size: 30px;
+  }
+  .compact-visual {
+    padding: 25px 18px;
+    gap: 13px;
+  }
+  .compact-visual p {
+    font-size: 13px;
+  }
+  .compact-symbol {
+    width: 58px;
+  }
+  .language-switch button {
+    min-width: 30px;
+  }
+  .site-header .wordmark {
+    font-size: 15px;
+  }
+  .header-controls {
+    gap: 8px;
+  }
+  .playground h2 {
+    font-size: 30px;
   }
 }

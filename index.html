@@ -1,40 +1,41 @@
 <!doctype html>
+
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f6f6ef" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#f6f6ef" name="theme-color" />
     <title data-i18n="documentTitle">
       Elias Champi — Código con intención. Interfaces con detalle.
     </title>
     <meta
+      content="Elias Champi, desarrollador full-stack en Cusco. Coedula, Faztore, Aeduca y librerías con Svelte, Rust, PHP y PostgreSQL."
+      data-i18n-content="description"
       name="description"
-      data-i18n-content="description"
-      content="Elias Champi, desarrollador full-stack en Cusco. Coedula, Faztore, Aeduca y librerías con Svelte, Rust, PHP y PostgreSQL."
     />
-    <link rel="canonical" href="https://eliaschampi.github.io/" />
+    <link href="https://eliaschampi.github.io/" rel="canonical" />
     <meta
-      property="og:title"
-      data-i18n-content="documentTitle"
       content="Elias Champi — Código con intención. Interfaces con detalle."
+      data-i18n-content="documentTitle"
+      property="og:title"
     />
     <meta
-      property="og:description"
-      data-i18n-content="description"
       content="Elias Champi, desarrollador full-stack en Cusco. Coedula, Faztore, Aeduca y librerías con Svelte, Rust, PHP y PostgreSQL."
+      data-i18n-content="description"
+      property="og:description"
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eliaschampi.github.io/" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta content="website" property="og:type" />
+    <meta content="https://eliaschampi.github.io/" property="og:url" />
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
     <link
-      rel="preload"
-      href="assets/manrope-400.ttf"
       as="font"
-      type="font/ttf"
       crossorigin=""
+      href="assets/manrope-400.ttf"
+      rel="preload"
+      type="font/ttf"
     />
-    <link rel="stylesheet" href="styles.css?v=4" />
-    <script type="module" src="app.js?v=3"></script>
+    <link href="styles.css?v=5" rel="stylesheet" />
+    <script src="app.js?v=4" type="module"></script>
   </head>
   <body>
     <a class="skip-link" href="#main"
@@ -42,57 +43,53 @@
     >
     <header class="site-header wrap">
       <a
-        class="wordmark"
-        href="#"
         aria-label="Inicio de Elias Champi"
+        class="wordmark"
         data-i18n-aria-label="homeLabel"
-        ><span class="brand-symbol" aria-hidden="true">e.</span> elias champi</a
+        href="#"
+        ><span aria-hidden="true" class="brand-symbol">e.</span> elias champi</a
       >
       <div class="header-controls">
         <div
-          class="language-switch"
-          role="group"
           aria-label="Idioma"
+          class="language-switch"
           data-i18n-aria-label="languageLabel"
+          role="group"
         >
           <button
-            type="button"
+            aria-pressed="true"
             data-language="es"
             lang="es"
-            aria-pressed="true"
+            type="button"
           >
             ES</button
           ><button
-            type="button"
+            aria-pressed="false"
             data-language="en"
             lang="en"
-            aria-pressed="false"
+            type="button"
           >
             EN
           </button>
         </div>
         <button
-          class="menu-toggle"
-          aria-label="Abrir navegación"
-          data-i18n-aria-label="openMenu"
-          aria-expanded="false"
           aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Abrir navegación"
+          class="menu-toggle"
+          data-i18n-aria-label="openMenu"
         >
           <span data-menu-label="">Menú</span>
           <span aria-hidden="true">＋</span>
         </button>
       </div>
       <nav
-        id="navigation"
         aria-label="Navegación principal"
         data-i18n-aria-label="navLabel"
+        id="navigation"
       >
-        <a href="#work"
-          ><span data-i18n="navWork">Proyectos </span><span>01</span></a
-        >
-        <a href="#about"
-          ><span data-i18n="navAbout">Sobre mí </span><span>02</span></a
-        >
+        <a href="#work"><span data-i18n="navWork">Proyectos </span></a>
+        <a href="#about"><span data-i18n="navAbout">Sobre mí </span></a>
         <a href="cv.html?lang=es"
           ><span data-i18n="navCv">CV </span><span>↗</span></a
         >
@@ -101,27 +98,18 @@
         >
       </nav>
     </header>
-
     <main id="main">
-      <section class="hero wrap" aria-labelledby="hero-title">
-        <div class="hero-meta mono">
-          <span
-            ><i class="status-dot" aria-hidden="true"></i>
-            <span data-i18n="heroMeta"
-              >DESARROLLADOR FULL-STACK · DISEÑO DE INTERFACES</span
-            ></span
-          ><span
-            ><span data-i18n="location">CUSCO, PERÚ </span
-            ><span aria-hidden="true">↗</span></span
-          >
-        </div>
+      <section aria-labelledby="hero-title" class="hero wrap">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1 id="hero-title" data-i18n="heroTitle">
+            <p class="hero-role" data-i18n="heroRole">
+              Desarrollador full-stack · Cusco, Perú
+            </p>
+            <h1 data-i18n="heroTitle" id="hero-title">
               Amo escribir<br />código.<br /><span class="muted"
                 >Cuido cada</span
               ><br /><span class="muted">detalle.</span
-              ><span class="headline-star" aria-hidden="true">✳</span>
+              ><span aria-hidden="true" class="headline-star">✳</span>
             </h1>
             <p>
               <span data-i18n="intro"
@@ -141,106 +129,75 @@
             </div>
           </div>
           <div
-            class="hero-art"
             aria-label="Experimento interactivo de diseño"
+            class="hero-art"
             data-i18n-aria-label="playLabel"
           >
-            <div class="art-grid" aria-hidden="true"></div>
-            <div class="art-top mono">
-              <span
-                ><span data-i18n="artTop">EN EL PUNTO DE ENCUENTRO</span></span
-              ><span><span data-i18n="artDesign">DISEÑO Y CÓDIGO</span></span>
-            </div>
-            <span class="art-orbit orbit-one" aria-hidden="true"></span
-            ><span class="art-orbit orbit-two" aria-hidden="true"></span>
-            <div class="code-note mono" data-i18n="codeNote">
-              <span class="code-comment">// cuidado en cada detalle</span
-              ><br /><span class="code-purple">const</span> crear = {<br />&nbsp;
-              forma: <span class="code-green">'clara'</span>,<br />&nbsp;
-              función: <span class="code-green">'útil'</span><br />};
-            </div>
+            <div aria-hidden="true" class="art-grid"></div>
+            <span aria-hidden="true" class="art-orbit orbit-one"></span
+            ><span aria-hidden="true" class="art-orbit orbit-two"></span>
             <div class="playground" id="playground">
               <div class="playground-heading">
-                <span class="mini-logo" aria-hidden="true">✳</span
+                <span aria-hidden="true" class="mini-logo">✳</span
                 ><span
                   ><span data-i18n="playHeading"
                     >Un pequeño experimento.</span
                   ></span
-                ><span class="window-dots" aria-hidden="true">•••</span>
+                ><span aria-hidden="true" class="window-dots">•••</span>
               </div>
               <div class="playground-body">
-                <span class="mono overline"
-                  ><span data-i18n="playOverline"
-                    >LOS DETALLES HACEN LA DIFERENCIA</span
-                  ></span
-                >
                 <h2>
                   <span data-i18n="playTitle"
                     >Que se sienta<br /><em>bien hecho.</em></span
                   >
                 </h2>
-                <div class="sample-line" aria-hidden="true">
+                <div aria-hidden="true" class="sample-line">
                   <span></span><span></span><span></span><span></span
                   ><span></span><span></span><span></span><span></span
                   ><span></span><span></span><span></span><span></span>
                 </div>
                 <div class="playground-bottom">
                   <div
-                    class="swatches"
-                    role="group"
                     aria-label="Color del experimento"
+                    class="swatches"
                     data-i18n-aria-label="accentLabel"
+                    role="group"
                   >
                     <button
+                      aria-label="Color lima"
+                      aria-pressed="true"
                       class="swatch"
                       data-color="lime"
-                      aria-label="Color lima"
                       data-i18n-aria-label="limeLabel"
-                      aria-pressed="true"
                     ></button
                     ><button
+                      aria-label="Color lila"
+                      aria-pressed="false"
                       class="swatch"
                       data-color="lilac"
-                      aria-label="Color lila"
                       data-i18n-aria-label="lilacLabel"
-                      aria-pressed="false"
                     ></button
                     ><button
+                      aria-label="Color durazno"
+                      aria-pressed="false"
                       class="swatch"
                       data-color="peach"
-                      aria-label="Color durazno"
                       data-i18n-aria-label="peachLabel"
-                      aria-pressed="false"
                     ></button>
                   </div>
-                  <span class="mono"
-                    ><span data-i18n="tryColor">PRUEBA UN COLOR </span
-                    ><span aria-hidden="true">↖</span></span
-                  >
                 </div>
               </div>
-            </div>
-            <div class="craft-label mono">
-              <span class="sparkle" aria-hidden="true">✧</span>
-              <span data-i18n="builtIntention">CREADO CON INTENCIÓN</span>
             </div>
             <div class="floating-tag">
               <span aria-hidden="true">↖</span>
               <span data-i18n="pointerLabel">Elias, en su elemento</span>
             </div>
-            <div class="art-bottom mono">
-              <span
-                ><span data-i18n="artBottom"
-                  >IDEA → INTERFAZ → IMPACTO</span
-                ></span
-              ><span>01 / EC</span>
-            </div>
           </div>
         </div>
         <div class="stack-strip">
-          <span class="mono"
+          <span class=""
             ><span data-i18n="toolkitLabel"
-              >MIS HERRAMIENTAS DE CADA DÍA</span
+              >Tecnologías con las que construyo</span
             ></span
           >
           <ul
@@ -248,41 +205,27 @@
             data-i18n-aria-label="coreTech"
           >
             <li>
-              <span class="tech-icon rust" aria-hidden="true">R</span>Rust
+              <span aria-hidden="true" class="tech-icon rust">R</span>Rust
             </li>
             <li>
-              <span class="tech-icon php" aria-hidden="true">php</span>PHP
+              <span aria-hidden="true" class="tech-icon php">php</span>PHP
             </li>
             <li>
-              <span class="tech-icon svelte" aria-hidden="true">S</span>Svelte
+              <span aria-hidden="true" class="tech-icon svelte">S</span>Svelte
             </li>
             <li>
-              <span class="tech-icon postgres" aria-hidden="true">P</span
+              <span aria-hidden="true" class="tech-icon postgres">P</span
               >PostgreSQL
             </li>
             <li>
-              <span class="tech-icon ts" aria-hidden="true">TS</span>TypeScript
+              <span aria-hidden="true" class="tech-icon ts">TS</span>TypeScript
             </li>
           </ul>
-          <span class="strip-note"
-            ><span data-i18n="toolkitNote"
-              >La herramienta adecuada.<br />Los detalles correctos.</span
-            ></span
-          >
         </div>
       </section>
-
-      <section id="work" class="work-section wrap" aria-labelledby="work-title">
-        <div class="section-kicker mono">
-          <span
-            ><span data-i18n="workLabel"
-              >01 / PROYECTOS SELECCIONADOS</span
-            ></span
-          ><span
-            ><span data-i18n="workKicker"
-              >IDEAS CONVERTIDAS EN SOFTWARE</span
-            ></span
-          >
+      <section aria-labelledby="work-title" class="work-section wrap" id="work">
+        <div class="section-kicker">
+          <span><span data-i18n="workLabel">Proyectos</span></span>
         </div>
         <div class="section-heading">
           <h2 id="work-title">
@@ -296,28 +239,28 @@
           <a
             class="text-link"
             href="https://github.com/eliaschampi"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
             ><span data-i18n="allRepos">Mis librerías en GitHub </span
             ><span aria-hidden="true">↗</span></a
           >
         </div>
         <div
-          class="project-filters"
-          role="group"
           aria-label="Filtrar proyectos"
+          class="project-filters"
           data-i18n-aria-label="filterLabel"
+          role="group"
         >
-          <button class="filter" data-filter="all" aria-pressed="true">
-            <span data-i18n="filterAll">Todo </span><span>08</span></button
-          ><button class="filter" data-filter="interface" aria-pressed="false">
+          <button aria-pressed="true" class="filter" data-filter="all">
+            <span data-i18n="filterAll">Todo </span></button
+          ><button aria-pressed="false" class="filter" data-filter="interface">
             <span data-i18n="filterInterfaces">Interfaces</span></button
-          ><button class="filter" data-filter="fullstack" aria-pressed="false">
+          ><button aria-pressed="false" class="filter" data-filter="fullstack">
             <span data-i18n="filterFullstack">Full-stack</span></button
-          ><button class="filter" data-filter="tools" aria-pressed="false">
+          ><button aria-pressed="false" class="filter" data-filter="tools">
             <span data-i18n="filterTools">Librerías y herramientas</span>
           </button>
-          <p class="sr-only" id="filter-status" aria-live="polite"></p>
+          <p aria-live="polite" class="sr-only" id="filter-status"></p>
         </div>
         <div class="project-grid">
           <article
@@ -326,30 +269,23 @@
             id="project-coedula"
           >
             <a
-              class="project-visual coedula-visual"
-              href="https://carrioneduca.edu.pe/"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Coedula — sitio institucional Carrión"
+              class="project-visual coedula-visual"
               data-i18n-aria-label="coedulaAria"
+              href="https://carrioneduca.edu.pe/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <span class="visual-label mono" data-i18n="coedulaVisualLabel"
-                >LA ACADEMIA, CONECTADA.</span
-              ><span class="visual-arrow" aria-hidden="true">↗</span>
-              <div class="coedula-composition" aria-hidden="true">
+              <span aria-hidden="true" class="visual-arrow">↗</span>
+              <div aria-hidden="true" class="coedula-composition">
                 <div class="coedula-wordmark">coedula<span>◈</span></div>
                 <div class="coedula-panel">
-                  <div class="coedula-panel-top">
-                    <span class="mono" data-i18n="coedulaWorkspace"
-                      >UN SOLO ESPACIO</span
-                    ><i>•••</i>
-                  </div>
                   <div class="coedula-system">
                     <span class="system-core">c.</span
-                    ><svg viewBox="0 0 300 130" preserveAspectRatio="none">
+                    ><svg preserveaspectratio="none" viewbox="0 0 300 130">
                       <path
                         d="M150 10V40M45 62V40H255V62M150 40V62M45 91V108H255V91M150 108V120"
-                      />
+                      ></path>
                     </svg>
                     <div class="system-modules">
                       <span data-i18n="enrollment">Matrículas</span
@@ -361,59 +297,30 @@
                     >
                   </div>
                 </div>
-                <span class="coedula-note mono" data-i18n="coedulaNote"
-                  >CADA PROCESO, EN SU LUGAR.</span
-                >
               </div>
-              <span class="visual-foot mono"
-                ><span data-i18n="educationEcosystem">ECOSISTEMA EDUCATIVO</span
-                ><span data-i18n="interfaceStudy"
-                  >EXPLORACIÓN DE INTERFAZ</span
-                ></span
-              ></a
-            >
+            </a>
             <div class="project-info">
               <div>
                 <h3>Coedula</h3>
                 <p>
                   <span data-i18n="coedulaSummary"
-                    >El día a día de la educación, conectado.</span
+                    >Matrículas, asistencia, pagos y evaluaciones para Academia
+                    Carrión.</span
                   >
                 </p>
               </div>
-              <span class="project-number mono">01</span>
-            </div>
-            <div class="project-access mono">
-              <span data-i18n="privateEducation"
-                >CÓDIGO PRIVADO · PLATAFORMA EDUCATIVA</span
-              >
             </div>
             <div class="tags">
               <span>SvelteKit</span><span>TypeScript</span
               ><span>PostgreSQL</span>
             </div>
-            <details class="project-detail">
-              <summary>
-                <span data-i18n="projectDetail">Dentro del proyecto </span
-                ><span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                <span data-i18n="coedulaDetail"
-                  >Una plataforma para la operación diaria de Academia Carrión:
-                  matrículas, asistencia, pagos y evaluaciones. SvelteKit y
-                  PostgreSQL conectan el sistema, con herramientas Rust para OMR
-                  y generación de documentos.</span
-                >
-              </p>
-              <a
-                href="https://carrioneduca.edu.pe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span data-i18n="institutionalLink"
-                  >Sitio institucional Carrión ↗</span
-                ></a
-              >
-            </details>
+            <a
+              class="project-link"
+              href="https://carrioneduca.edu.pe/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="institutionalLink">Visitar Carrión ↗</span></a
+            >
           </article>
           <article
             class="project"
@@ -421,18 +328,14 @@
             id="project-faztore"
           >
             <a
-              class="project-visual store-visual"
-              href="https://faztore.com/"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Visitar mi tienda Faztore"
+              class="project-visual store-visual"
               data-i18n-aria-label="faztoreAria"
-              ><span class="visual-label mono"
-                ><span data-i18n="faztoreVisualLabel"
-                  >BUENA TECNOLOGÍA. UNA EXPERIENCIA CUIDADA.</span
-                ></span
-              ><span class="visual-arrow" aria-hidden="true">↗</span>
-              <div class="store-composition" aria-hidden="true">
+              href="https://faztore.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span aria-hidden="true" class="visual-arrow">↗</span>
+              <div aria-hidden="true" class="store-composition">
                 <div class="store-wordmark">faztore<span>↗</span></div>
                 <div class="store-message">
                   <span data-i18n="storeMessage"
@@ -440,7 +343,7 @@
                   >
                 </div>
                 <div class="store-product">
-                  <svg viewBox="0 0 140 145" fill="none">
+                  <svg fill="none" viewbox="0 0 140 145">
                     <path
                       d="M30 78V63C30 5 112 5 112 63V78"
                       stroke="#3d3935"
@@ -452,107 +355,66 @@
                       stroke-width="3"
                     ></path>
                     <rect
+                      fill="#45403c"
+                      height="55"
+                      rx="12"
+                      transform="rotate(-8 19 66)"
+                      width="27"
                       x="19"
                       y="66"
-                      width="27"
-                      height="55"
-                      rx="12"
-                      fill="#45403c"
-                      transform="rotate(-8 19 66)"
                     ></rect>
                     <rect
+                      fill="#45403c"
+                      height="55"
+                      rx="12"
+                      transform="rotate(8 101 63)"
+                      width="27"
                       x="101"
                       y="63"
-                      width="27"
-                      height="55"
-                      rx="12"
-                      fill="#45403c"
-                      transform="rotate(8 101 63)"
                     ></rect>
                     <rect
+                      fill="#8c7d6d"
+                      height="42"
+                      rx="6"
+                      transform="rotate(-8 25 71)"
+                      width="13"
                       x="25"
                       y="71"
-                      width="13"
-                      height="42"
-                      rx="6"
-                      fill="#8c7d6d"
-                      transform="rotate(-8 25 71)"
                     ></rect>
                     <rect
-                      x="108"
-                      y="71"
-                      width="13"
+                      fill="#8c7d6d"
                       height="42"
                       rx="6"
-                      fill="#8c7d6d"
                       transform="rotate(8 108 71)"
+                      width="13"
+                      x="108"
+                      y="71"
                     ></rect>
                   </svg>
-                  <div>
-                    <span
-                      ><span data-i18n="personalAudio"
-                        >AUDIO PERSONAL</span
-                      ></span
-                    ><b
-                      ><span data-i18n="findSound">Encuentra tu sonido. </span
-                      ><i>↗</i></b
-                    >
-                  </div>
                 </div>
-                <span class="store-tag mono"
-                  ><span data-i18n="storeLocation"
-                    >DESDE CUSCO, PERÚ</span
-                  ></span
-                >
               </div>
-              <span class="visual-foot mono"
-                ><span data-i18n="storeLabel">TIENDA DE TECNOLOGÍA</span>
-                <span
-                  ><span data-i18n="interfaceStudy"
-                    >EXPLORACIÓN DE INTERFAZ</span
-                  ></span
-                ></span
-              ></a
-            >
+            </a>
             <div class="project-info">
               <div>
                 <h3>Faztore</h3>
                 <p>
                   <span data-i18n="faztoreSummary"
-                    >Mi tienda. Mi forma de cuidar cada detalle.</span
+                    >Mi tienda de tecnología: del catálogo a la gestión de
+                    productos, inventario y ventas.</span
                   >
                 </p>
               </div>
-              <span class="project-number mono">02</span>
-            </div>
-            <div class="project-access mono">
-              <span data-i18n="privateStore"
-                >CÓDIGO PRIVADO · TIENDA EN LÍNEA</span
-              >
             </div>
             <div class="tags">
               <span>SvelteKit</span><span>Lumi UI</span><span>PostgreSQL</span>
             </div>
-            <details class="project-detail">
-              <summary>
-                <span data-i18n="projectDetail">Dentro del proyecto </span
-                ><span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                <span data-i18n="faztoreDetail"
-                  >Mi tienda de tecnología, con una experiencia de compra
-                  cuidada y un sistema propio para gestionar productos,
-                  inventario y ventas. Un catálogo público conectado con las
-                  herramientas que hacen funcionar el negocio.</span
-                >
-              </p>
-              <a
-                href="https://faztore.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span data-i18n="storeLink">Visitar la tienda ↗</span></a
-              >
-            </details>
+            <a
+              class="project-link"
+              href="https://faztore.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="storeLink">Visitar la tienda ↗</span></a
+            >
           </article>
           <article
             class="project"
@@ -560,140 +422,48 @@
             id="project-aeduca"
           >
             <a
-              class="project-visual aeduca-visual"
-              href="https://carrioneduca.edu.pe/"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Aeduca — sitio institucional Carrión"
+              class="project-visual aeduca-visual"
               data-i18n-aria-label="aeducaAria"
-              ><span class="visual-label mono"
-                ><span data-i18n="aeducaVisualLabel"
-                  >CONECTANDO LA EDUCACIÓN</span
-                ></span
-              ><span class="visual-arrow" aria-hidden="true">↗</span>
-              <div class="school-window" aria-hidden="true">
-                <aside>
-                  <b>a<span>educa</span></b
-                  ><i class="current"
-                    >▦ <span><span data-i18n="overview">Resumen</span></span></i
-                  ><i
-                    >◉
-                    <span
-                      ><span data-i18n="students">Estudiantes</span></span
-                    ></i
-                  ><i
-                    >▤
-                    <span><span data-i18n="academics">Académico</span></span></i
-                  ><i
-                    >▧
-                    <span
-                      ><span data-i18n="attendance">Asistencia</span></span
-                    ></i
-                  ><i
-                    >↗
-                    <span><span data-i18n="reports">Informes</span></span></i
-                  >
-                </aside>
-                <div class="school-main">
-                  <span class="school-eyebrow"
-                    ><span data-i18n="connectedCampus"
-                      >UNA COMUNIDAD CONECTADA</span
-                    ></span
-                  >
-                  <h4>
-                    <span data-i18n="schoolTitle">Todo, en su lugar.</span>
-                  </h4>
-                  <div class="school-metrics">
-                    <div>
-                      <span data-i18n="students">Estudiantes</span
-                      ><b
-                        ><span data-i18n="peopleFirst"
-                          >Primero, las personas.</span
-                        ></b
-                      >
-                    </div>
-                    <div>
-                      <span data-i18n="academics">Académico</span
-                      ><b
-                        ><span data-i18n="alwaysConnected"
-                          >Siempre conectados.</span
-                        ></b
-                      >
-                    </div>
-                  </div>
-                  <div class="school-graph">
-                    <span
-                      ><span data-i18n="learningNoLimits"
-                        >Aprender, sin límites</span
-                      ></span
-                    ><svg viewBox="0 0 300 95" fill="none">
-                      <path
-                        d="M0 80C35 80 25 40 60 48S95 80 125 44S160 70 190 30S240 54 300 8"
-                        stroke="#557a54"
-                        stroke-width="3"
-                      ></path>
-                      <path
-                        d="M0 80C35 80 25 40 60 48S95 80 125 44S160 70 190 30S240 54 300 8V95H0Z"
-                        fill="#b7ccb1"
-                        fill-opacity=".3"
-                      ></path>
-                    </svg>
+              href="https://carrioneduca.edu.pe/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span aria-hidden="true" class="visual-arrow">↗</span>
+              <div aria-hidden="true" class="education-art">
+                <div class="education-wordmark">aeduca<span>↗</span></div>
+                <div class="education-card">
+                  <span class="education-symbol">✳</span>
+                  <h4 data-i18n="schoolTitle">Todo, en su lugar.</h4>
+                  <div class="education-modules">
+                    <span data-i18n="academics">Académico</span
+                    ><span data-i18n="students">Estudiantes</span
+                    ><span data-i18n="reports">Informes</span>
                   </div>
                 </div>
               </div>
-              <span class="visual-foot mono"
-                ><span data-i18n="educationEcosystem"
-                  >ECOSISTEMA EDUCATIVO</span
-                >
-                <span
-                  ><span data-i18n="interfaceStudy"
-                    >EXPLORACIÓN DE INTERFAZ</span
-                  ></span
-                ></span
-              ></a
-            >
+            </a>
             <div class="project-info">
               <div>
                 <h3>Aeduca</h3>
                 <p>
                   <span data-i18n="aeducaSummary"
-                    >Una comunidad educativa más conectada.</span
+                    >Gestión académica y administrativa, con un espacio para
+                    docentes y estudiantes.</span
                   >
                 </p>
               </div>
-              <span class="project-number mono">03</span>
-            </div>
-            <div class="project-access mono">
-              <span data-i18n="privateEducation"
-                >CÓDIGO PRIVADO · PLATAFORMA EDUCATIVA</span
-              >
             </div>
             <div class="tags">
               <span>PHP / Laravel</span><span>Svelte / Inertia</span
               ><span>PostgreSQL</span>
             </div>
-            <details class="project-detail">
-              <summary>
-                <span data-i18n="projectDetail">Dentro del proyecto </span
-                ><span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                <span data-i18n="aeducaDetail"
-                  >Una plataforma educativa que reúne la gestión académica y
-                  administrativa con el acceso de docentes y estudiantes.
-                  Desarrollada con Laravel, Inertia, Svelte y PostgreSQL, con
-                  Lumi UI como base de sus interfaces.</span
-                >
-              </p>
-              <a
-                href="https://carrioneduca.edu.pe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span data-i18n="institutionalLink"
-                  >Sitio institucional Carrión ↗</span
-                ></a
-              >
-            </details>
+            <a
+              class="project-link"
+              href="https://carrioneduca.edu.pe/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="institutionalLink">Visitar Carrión ↗</span></a
+            >
           </article>
           <article
             class="project"
@@ -701,19 +471,15 @@
             id="project-lumi"
           >
             <a
-              class="project-visual lumi-visual"
-              href="https://eliaschampi.github.io/lumi/"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Explorar Lumi UI"
+              class="project-visual lumi-visual"
               data-i18n-aria-label="lumiAria"
+              href="https://eliaschampi.github.io/lumi/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <span class="visual-label mono"
-                ><span data-i18n="lumiVisualLabel"
-                  >UN SISTEMA PARA CREAR BUENAS INTERFACES</span
-                ></span
-              ><span class="visual-arrow" aria-hidden="true">↗</span>
-              <div class="lumi-composition" aria-hidden="true">
+              <span aria-hidden="true" class="visual-arrow">↗</span>
+              <div aria-hidden="true" class="lumi-composition">
                 <div class="lumi-title">lumi<span>✳</span></div>
                 <div class="lumi-widget">
                   <div class="widget-top">
@@ -726,43 +492,23 @@
                       ><span data-i18n="dark">Oscuro</span></span
                     ><span><span data-i18n="auto">Auto</span></span>
                   </div>
-                  <div class="widget-row">
-                    <span
-                      ><span data-i18n="thoughtfulDefault"
-                        >Cuidado desde el inicio</span
-                      ></span
-                    ><i></i>
-                  </div>
                   <div class="widget-chart">
                     <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
                   </div>
                 </div>
-                <span class="lumi-pill">Svelte 5 <span>↗</span></span
-                ><span class="lumi-pill secondary"
-                  ><span data-i18n="lumiPill">Un poco más especial.</span></span
-                >
+                <span class="lumi-pill">Svelte 5 <span>↗</span></span>
               </div>
-              <span class="visual-foot mono"
-                ><span data-i18n="componentLibrary"
-                  >LIBRERÍA DE COMPONENTES</span
-                >
-                <span
-                  ><span data-i18n="interfaceStudy"
-                    >EXPLORACIÓN DE INTERFAZ</span
-                  ></span
-                ></span
-              >
             </a>
             <div class="project-info">
               <div>
                 <h3>Lumi UI</h3>
                 <p>
                   <span data-i18n="lumiSummary"
-                    >Un lenguaje común para interfaces cuidadas.</span
+                    >Componentes y herramientas de diseño para crear interfaces
+                    consistentes con Svelte.</span
                   >
                 </p>
               </div>
-              <span class="project-number mono">04</span>
             </div>
             <div class="tags">
               <span>Svelte 5</span><span>TypeScript</span
@@ -770,41 +516,24 @@
                 ><span data-i18n="designSystems">Sistemas de diseño</span></span
               >
             </div>
-            <details class="project-detail">
-              <summary>
-                <span data-i18n="projectDetail">Dentro del proyecto </span
-                ><span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                <span data-i18n="lumiDetail"
-                  >Una librería de componentes reutilizables, variables
-                  semánticas de diseño, estructuras adaptables, formularios y
-                  gráficos. La base para mantener coherencia desde el control
-                  más pequeño hasta la experiencia completa.</span
-                >
-              </p>
-              <a
-                href="https://github.com/eliaschampi/lumi-ui"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span data-i18n="sourceLink">Explorar el código ↗</span></a
-              >
-            </details>
+            <a
+              class="project-link"
+              href="https://github.com/eliaschampi/lumi-ui"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="sourceLink">Ver código ↗</span></a
+            >
           </article>
           <article class="project" data-category="tools" id="project-omr">
             <a
-              class="project-visual omr-visual"
-              href="https://github.com/eliaschampi/nextya"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Explorar la implementación pública de OMR"
+              class="project-visual omr-visual"
               data-i18n-aria-label="omrAria"
-              ><span class="visual-label mono"
-                ><span data-i18n="omrVisualLabel"
-                  >DEL PAPEL A LA INFORMACIÓN</span
-                ></span
-              ><span class="visual-arrow" aria-hidden="true">↗</span>
-              <div class="omr-composition" aria-hidden="true">
+              href="https://github.com/eliaschampi/nextya"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span aria-hidden="true" class="visual-arrow">↗</span>
+              <div aria-hidden="true" class="omr-composition">
                 <div class="answer-sheet">
                   <div class="sheet-corners"></div>
                   <span class="mono"
@@ -832,74 +561,44 @@
                   <div class="scan-line"></div>
                 </div>
                 <div class="omr-result mono">
-                  <span class="status-dot"></span>
-                  <span data-i18n="omrRead">LEER. RECONOCER. COMPRENDER.</span
-                  ><br /><span class="result-code">[ B, A, D, C ]</span>
+                  <br /><span class="result-code">[ B, A, D, C ]</span>
                 </div>
               </div>
-              <span class="visual-foot mono"
-                ><span data-i18n="omrLabel"
-                  >RECONOCIMIENTO ÓPTICO DE MARCAS</span
-                >
-                <span
-                  ><span data-i18n="conceptStudy"
-                    >EXPLORACIÓN VISUAL</span
-                  ></span
-                ></span
-              ></a
-            >
+            </a>
             <div class="project-info">
               <div>
                 <h3>OMR</h3>
                 <p>
                   <span data-i18n="omrSummary"
-                    >De una respuesta marcada a un dato útil.</span
+                    >Lectura de hojas de respuestas y procesamiento automático
+                    de evaluaciones.</span
                   >
                 </p>
               </div>
-              <span class="project-number mono">05</span>
             </div>
             <div class="tags">
               <span>Rust</span><span>OpenCV</span><span>TypeScript</span>
             </div>
-            <details class="project-detail">
-              <summary>
-                <span data-i18n="projectDetail">Dentro del proyecto </span
-                ><span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                <span data-i18n="omrDetail"
-                  >Herramientas para leer hojas de respuestas y automatizar
-                  evaluaciones. Mi motor privado en Rust forma parte de los
-                  procesos educativos; la implementación pública anterior en
-                  NextYa, con TypeScript y OpenCV, muestra detección de hojas,
-                  corrección de perspectiva y lectura de marcas.</span
-                >
-              </p>
-              <a
-                href="https://github.com/eliaschampi/nextya/tree/main/src/lib/omrProcessor"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span data-i18n="omrSource"
-                  >Ver la implementación pública ↗</span
-                ></a
-              >
-            </details>
+            <a
+              class="project-link"
+              href="https://github.com/eliaschampi/nextya/tree/main/src/lib/omrProcessor"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="omrSource"
+                >Ver la implementación pública ↗</span
+              ></a
+            >
           </article>
           <article class="project" data-category="tools" id="project-report">
             <a
-              class="project-visual rust-visual"
-              href="https://github.com/eliaschampi/report-rs"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Explorar report-rs en GitHub"
+              class="project-visual rust-visual"
               data-i18n-aria-label="reportAria"
-              ><span class="visual-label mono"
-                ><span data-i18n="rustVisualLabel"
-                  >LA BELLEZA QUE NO SIEMPRE SE VE</span
-                ></span
-              ><span class="visual-arrow" aria-hidden="true">↗</span>
-              <div class="rust-composition" aria-hidden="true">
+              href="https://github.com/eliaschampi/report-rs"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span aria-hidden="true" class="visual-arrow">↗</span>
+              <div aria-hidden="true" class="rust-composition">
                 <span class="rust-mark">R<span>✳</span></span>
                 <div class="rust-console mono">
                   <div><i></i> report-rs</div>
@@ -917,23 +616,17 @@
                   ><i></i><i></i><i></i><i></i><b>PDF ↗</b></span
                 >
               </div>
-              <span class="visual-foot mono"
-                ><span data-i18n="pdfEngine">MOTOR PDF DETERMINISTA</span>
-                <span
-                  ><span data-i18n="rustTooling">HERRAMIENTAS RUST</span></span
-                ></span
-              ></a
-            >
+            </a>
             <div class="project-info">
               <div>
                 <h3>report-rs</h3>
                 <p>
                   <span data-i18n="reportSummary"
-                    >Datos estructurados. Documentos bien hechos.</span
+                    >Generación de comprobantes e informes PDF a partir de datos
+                    estructurados.</span
                   >
                 </p>
               </div>
-              <span class="project-number mono">06</span>
             </div>
             <div class="tags">
               <span>Rust</span
@@ -944,26 +637,13 @@
                 ></span
               >
             </div>
-            <details class="project-detail">
-              <summary>
-                <span data-i18n="projectDetail">Dentro del proyecto </span
-                ><span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                <span data-i18n="reportDetail"
-                  >Un motor Rust con un protocolo de entrada y salida en JSON
-                  para generar PDF de forma determinista. Incluye comprobantes
-                  térmicos e informes de asistencia A4 paginados; otros formatos
-                  siguen en desarrollo.</span
-                >
-              </p>
-              <a
-                href="https://github.com/eliaschampi/report-rs"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span data-i18n="sourceLink">Explorar el código ↗</span></a
-              >
-            </details>
+            <a
+              class="project-link"
+              href="https://github.com/eliaschampi/report-rs"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="sourceLink">Ver código ↗</span></a
+            >
           </article>
           <article
             class="project compact-project"
@@ -971,21 +651,16 @@
             id="project-tinymed"
           >
             <a
-              class="compact-visual tinymed-visual"
-              href="https://github.com/eliaschampi/tinymed"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Explorar Tinymed en GitHub"
+              class="compact-visual tinymed-visual"
               data-i18n-aria-label="tinymedAria"
-              ><span class="compact-symbol media-symbol" aria-hidden="true"
+              href="https://github.com/eliaschampi/tinymed"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span aria-hidden="true" class="compact-symbol media-symbol"
                 >◫</span
               >
               <div>
-                <span class="mono"
-                  ><span data-i18n="tinymedVisualLabel"
-                    >PEQUEÑAS HERRAMIENTAS. BUENAS BASES.</span
-                  ></span
-                >
                 <h3>Tinymed</h3>
                 <p>
                   <span data-i18n="tinymedSummary"
@@ -994,7 +669,7 @@
                   >
                 </p>
               </div>
-              <span class="compact-arrow" aria-hidden="true">↗</span></a
+              <span aria-hidden="true" class="compact-arrow">↗</span></a
             >
             <div class="tags">
               <span>TypeScript</span><span>Sharp</span
@@ -1007,21 +682,16 @@
           </article>
           <article class="project compact-project" data-category="tools">
             <a
-              class="compact-visual naipe-visual"
-              href="https://github.com/eliaschampi/naipe"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Explorar Naipe en GitHub"
+              class="compact-visual naipe-visual"
               data-i18n-aria-label="naipeAria"
-              ><span class="compact-symbol playing-card" aria-hidden="true"
+              href="https://github.com/eliaschampi/naipe"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span aria-hidden="true" class="compact-symbol playing-card"
                 >A<br />♠</span
               >
               <div>
-                <span class="mono"
-                  ><span data-i18n="naipeLabel"
-                    >UN PROYECTO PARA JUGAR</span
-                  ></span
-                >
                 <h3>Naipe</h3>
                 <p>
                   <span data-i18n="naipeSummary"
@@ -1030,7 +700,7 @@
                   >
                 </p>
               </div>
-              <span class="compact-arrow" aria-hidden="true">↗</span></a
+              <span aria-hidden="true" class="compact-arrow">↗</span></a
             >
             <div class="tags">
               <span>Rust</span><span>WebAssembly</span><span>TypeScript</span>
@@ -1038,15 +708,10 @@
           </article>
         </div>
       </section>
-
-      <section class="about-section" id="about" aria-labelledby="about-title">
+      <section aria-labelledby="about-title" class="about-section" id="about">
         <div class="wrap">
-          <div class="section-kicker mono">
-            <span
-              ><span data-i18n="aboutLabel">02 / DETRÁS DEL CÓDIGO</span></span
-            ><span
-              ><span data-i18n="aboutKicker">CURIOSO POR NATURALEZA</span></span
-            >
+          <div class="section-kicker">
+            <span><span data-i18n="aboutLabel">Sobre mí</span></span>
           </div>
           <div class="about-grid">
             <div>
@@ -1058,13 +723,8 @@
                   ></span
                 >
               </h2>
-              <div class="about-monogram" aria-hidden="true">
-                <span>ec</span><i>✳</i
-                ><span class="mono"
-                  ><span data-i18n="monogramLabel"
-                    >CUSCO, PERÚ · CURIOSIDAD POR CREAR</span
-                  ></span
-                >
+              <div aria-hidden="true" class="about-monogram">
+                <span>ec</span><i>✳</i>
               </div>
             </div>
             <div class="about-copy">
@@ -1190,19 +850,13 @@
           </div>
         </div>
       </section>
-
       <section
+        aria-labelledby="contact-title"
         class="contact-section wrap"
         id="contact"
-        aria-labelledby="contact-title"
       >
-        <div class="section-kicker mono">
-          <span><span data-i18n="contactLabel">03 / TU PRÓXIMA IDEA</span></span
-          ><span
-            ><span data-i18n="contactKicker"
-              >CREEMOS ALGO QUE VALGA LA PENA</span
-            ></span
-          >
+        <div class="section-kicker">
+          <span><span data-i18n="contactLabel">Hablemos</span></span>
         </div>
         <div class="contact-heading">
           <h2 id="contact-title">
@@ -1211,10 +865,10 @@
             >
           </h2>
           <a
-            class="contact-circle"
-            href="mailto:eliaschampi04@gmail.com"
             aria-label="Escribir a Elias Champi"
+            class="contact-circle"
             data-i18n-aria-label="emailAria"
+            href="mailto:eliaschampi04@gmail.com"
             ><span aria-hidden="true">↗</span></a
           >
         </div>
@@ -1225,13 +879,13 @@
           <div class="social-links">
             <a
               href="https://github.com/eliaschampi"
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
               >GitHub ↗</a
             ><a
               href="https://www.linkedin.com/in/eliaschampi"
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
               >LinkedIn ↗</a
             ><a href="cv.html?lang=es"><span data-i18n="navCv">CV </span>↗</a>
           </div>
@@ -1240,11 +894,7 @@
     </main>
     <footer class="site-footer wrap mono">
       <span>© <span id="year">2026</span> ELIAS CHAMPI</span
-      ><span
-        ><span data-i18n="footerCraft"
-          >HECHO CON CUIDADO. HASTA EL ÚLTIMO DETALLE.</span
-        ></span
-      ><a href="#"><span data-i18n="backTop">VOLVER ARRIBA ↑</span></a>
+      ><a href="#"><span data-i18n="backTop">Volver arriba ↑</span></a>
     </footer>
     <noscript
       ><p class="noscript-note">
