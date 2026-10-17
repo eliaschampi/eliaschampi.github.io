@@ -1,0 +1,401 @@
+/* Original interface studies supporting the project stories. */
+.project-visual {
+  display: block;
+  height: 310px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.project-visual > div {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-visual:hover > div {
+  transform: translateY(-4px);
+}
+.coedula-visual {
+  background: #dce4e4;
+  color: #526468;
+}
+.coedula-composition {
+  position: absolute;
+  inset: 40px 27px 30px;
+}
+.coedula-wordmark {
+  font-size: 37px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #40565c;
+  position: absolute;
+  left: 3%;
+  top: 0;
+}
+.coedula-wordmark > span {
+  font-size: 22px;
+  margin-left: 8px;
+  color: #6f8e93;
+  vertical-align: middle;
+}
+.coedula-panel {
+  position: absolute;
+  right: 3%;
+  top: 31%;
+  width: 280px;
+  background: #34484b;
+  border: 1px solid #f3ffff55;
+  border-radius: 8px;
+  box-shadow: 0 18px 24px #4a6a6a2b;
+  transform: rotate(-5deg);
+  color: #b9cdca;
+  overflow: hidden;
+}
+.coedula-system {
+  position: relative;
+  height: 146px;
+  text-align: center;
+  padding: 12px 15px;
+}
+.system-core {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: #bfd7b2;
+  color: #394f42;
+  border-radius: 7px;
+  font-size: 23px;
+  letter-spacing: -3px;
+  padding-right: 3px;
+  line-height: 1;
+}
+.coedula-system svg {
+  position: absolute;
+  inset: 14px 0 0;
+  width: 100%;
+  height: 115px;
+  fill: none;
+  stroke: #849c8c;
+  stroke-width: 1;
+  z-index: -1;
+}
+.system-modules {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  margin-top: 18px;
+  font-size: 10px;
+}
+.system-modules > span {
+  background: #445c5e;
+  padding: 7px 8px;
+  border-radius: 4px;
+  border: 1px solid #7e989158;
+  min-width: 65px;
+}
+.system-result {
+  position: relative;
+  display: block;
+  width: max-content;
+  margin: 17px auto 0;
+  padding: 0 5px;
+  background: #34484b;
+  font-size: 10px;
+  color: #a8c0b6;
+}
+.store-visual {
+  background: #e8e1d7;
+  color: #766551;
+}
+.store-composition {
+  position: absolute;
+  inset: 43px 27px 30px;
+}
+.store-wordmark {
+  position: absolute;
+  top: 0;
+  left: 1%;
+  font-size: 27px;
+  letter-spacing: -1.7px;
+  font-weight: 700;
+  color: #66513c;
+}
+.store-wordmark > span {
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.store-message {
+  position: absolute;
+  left: 1%;
+  top: 32%;
+  font-size: 35px;
+  letter-spacing: -1.7px;
+  line-height: 1.08;
+  color: #695743;
+}
+.store-product {
+  position: absolute;
+  right: 1%;
+  top: 5%;
+  width: 156px;
+  height: 215px;
+  border-radius: 6px;
+  background: #f6f1e8;
+  border: 1px solid #fff9;
+  transform: rotate(7deg);
+  box-shadow: 0 18px 26px #89725826;
+  overflow: hidden;
+}
+.store-product svg {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.aeduca-visual {
+  background: #dfe6d8;
+  color: #526345;
+}
+.education-art {
+  position: absolute;
+  inset: 36px 27px 28px;
+}
+.education-wordmark {
+  font-size: 37px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #526b3e;
+}
+.education-wordmark > span {
+  font-size: 23px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+.education-card {
+  position: absolute;
+  right: 1%;
+  left: 10%;
+  top: 33%;
+  background: #f7f9f1;
+  border: 1px solid #ffffffaa;
+  border-radius: 8px;
+  padding: 18px 20px;
+  transform: rotate(-5deg);
+  box-shadow: 0 18px 30px #4b5d3f20;
+}
+.education-symbol {
+  font-size: 28px;
+  color: #91a876;
+  line-height: 1;
+}
+.education-card h4 {
+  font-size: 23px;
+  letter-spacing: -1px;
+  margin: 6px 0 15px;
+}
+.education-modules {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.education-modules > span {
+  font-size: 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #e8eede;
+  color: #687b51;
+}
+@media (max-width: 1100px) {
+  .project-visual {
+    height: 292px;
+  }
+  .coedula-composition {
+    inset: 36px 22px 26px;
+  }
+  .coedula-wordmark,
+  .education-wordmark {
+    font-size: 33px;
+  }
+  .coedula-panel {
+    width: 245px;
+    right: 0;
+    top: 32%;
+  }
+  .coedula-system {
+    height: 142px;
+    padding: 12px;
+  }
+  .system-modules {
+    gap: 4px;
+    font-size: 9px;
+  }
+  .system-modules > span {
+    padding: 7px 6px;
+    min-width: 60px;
+  }
+  .system-result {
+    font-size: 9px;
+  }
+  .store-composition {
+    inset: 37px 22px 25px;
+  }
+  .store-product {
+    width: 137px;
+    height: 200px;
+    right: 0;
+    top: 6%;
+  }
+  .store-wordmark {
+    font-size: 24px;
+  }
+  .store-message {
+    font-size: 30px;
+  }
+  .education-art {
+    inset: 33px 22px 25px;
+  }
+  .education-card {
+    left: 4%;
+    right: 0;
+    padding: 15px 16px;
+  }
+  .education-card h4 {
+    font-size: 21px;
+  }
+  .education-modules {
+    gap: 5px;
+  }
+  .education-modules > span {
+    font-size: 9px;
+    padding: 4px 6px;
+  }
+}
+@media (max-width: 760px) {
+  .project-visual {
+    height: 310px;
+  }
+  .coedula-composition {
+    inset: 38px 27px 28px;
+  }
+  .coedula-wordmark,
+  .education-wordmark {
+    font-size: 37px;
+  }
+  .coedula-panel {
+    width: 280px;
+    right: 2%;
+    top: 32%;
+  }
+  .coedula-system {
+    height: 146px;
+    padding: 12px 15px;
+  }
+  .system-modules {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .system-modules > span {
+    padding: 7px 8px;
+    min-width: 65px;
+  }
+  .system-result {
+    font-size: 10px;
+  }
+  .store-composition {
+    inset: 40px 27px 28px;
+  }
+  .store-product {
+    width: 156px;
+    height: 215px;
+    right: 1%;
+    top: 5%;
+  }
+  .store-wordmark {
+    font-size: 27px;
+  }
+  .store-message {
+    font-size: 35px;
+  }
+  .education-art {
+    inset: 36px 27px 28px;
+  }
+  .education-card {
+    left: 10%;
+    right: 1%;
+    padding: 18px 20px;
+  }
+  .education-card h4 {
+    font-size: 23px;
+  }
+  .education-modules {
+    gap: 7px;
+  }
+  .education-modules > span {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+}
+@media (max-width: 390px) {
+  .project-visual {
+    height: 282px;
+  }
+  .coedula-composition {
+    inset: 31px 22px 24px;
+  }
+  .coedula-wordmark,
+  .education-wordmark {
+    font-size: 33px;
+  }
+  .coedula-panel {
+    width: 246px;
+    right: -1%;
+    top: 30%;
+  }
+  .coedula-system {
+    height: 142px;
+    padding: 12px;
+  }
+  .system-modules {
+    gap: 4px;
+    font-size: 9px;
+  }
+  .system-modules > span {
+    padding: 7px 6px;
+    min-width: 60px;
+  }
+  .system-result {
+    font-size: 9px;
+  }
+  .store-composition {
+    inset: 35px 22px 25px;
+  }
+  .store-product {
+    width: 136px;
+    height: 195px;
+    right: 0;
+    top: 4%;
+  }
+  .store-wordmark {
+    font-size: 24px;
+  }
+  .store-message {
+    font-size: 30px;
+  }
+  .education-art {
+    inset: 31px 22px 24px;
+  }
+  .education-card {
+    left: 4%;
+    right: 0;
+    padding: 15px 16px;
+  }
+  .education-card h4 {
+    font-size: 21px;
+  }
+  .education-modules {
+    gap: 5px;
+  }
+  .education-modules > span {
+    font-size: 9px;
+    padding: 4px 6px;
+  }
+}

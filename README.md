@@ -2,7 +2,7 @@
 
 Personal portfolio and CV at [eliaschampi.github.io](https://eliaschampi.github.io/).
 
-A buildless, responsive site in Spanish and English. It presents Coedula, Faztore, Aeduca, and a selection of libraries and experiments. Private source stays private; product links lead to public websites.
+A buildless, responsive site in Spanish and English. It presents Coedula, Faztore, Aeduca, and a selection of libraries and experiments, with a personal introduction and portrait. Private source stays private; product links lead to public websites.
 
 ## Develop
 
@@ -17,8 +17,9 @@ Open `http://127.0.0.1:4173`. Check whether that port is already in use before s
 ## Files
 
 - `index.html`: semantic content and Spanish fallback.
-- `styles.css`: layout, project illustrations, responsive styles, and motion preferences.
-- `app.js`: language selection, project filters, mobile navigation, and color playground.
+- `styles.css`: personal editorial layout, responsive styles, and motion preferences.
+- `project-art.css`: original illustrations supporting the three project stories.
+- `app.js`: shared language preference and accessible mobile navigation.
 - `translations.js`: portfolio copy in both languages.
 - `cv.html`: bilingual CV with an A4 print layout.
 - `assets/`: local fonts, font licenses, and favicon.

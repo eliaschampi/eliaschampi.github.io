@@ -1,9 +1,17 @@
-import { translations } from "./translations.js?v=2";
+import { translations } from "./translations.js?v=3";
 
 const preferenceKey = "elias-language";
 const supportedLanguage = (value) => value === "es" || value === "en";
+const menuToggle = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#navigation");
 let language = "es";
 const text = (key) => translations[key][language];
+
+function closeMenu() {
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", text("openMenu"));
+  navigation.classList.remove("is-open");
+}
 
 function applyLanguage(nextLanguage) {
   language = nextLanguage;
@@ -11,7 +19,7 @@ function applyLanguage(nextLanguage) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.innerHTML = text(element.dataset.i18n);
   });
-  for (const attribute of ["aria-label", "content"]) {
+  for (const attribute of ["aria-label", "content", "alt"]) {
     document.querySelectorAll(`[data-i18n-${attribute}]`).forEach((element) => {
       element.setAttribute(
         attribute,
@@ -32,32 +40,22 @@ function applyLanguage(nextLanguage) {
   try {
     localStorage.setItem(preferenceKey, language);
   } catch {
-    /* Optional persistence. */
+    /* Optional preference. */
   }
   closeMenu();
-  updateFilterStatus();
-}
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#navigation");
-
-function closeMenu() {
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", text("openMenu"));
-  navigation.classList.remove("is-open");
 }
 
 menuToggle.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  menuToggle.setAttribute(
-    "aria-label",
-    isOpen ? text("openMenu") : text("closeMenu"),
-  );
-  navigation.classList.toggle("is-open", !isOpen);
+  const open = menuToggle.getAttribute("aria-expanded") !== "true";
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", text(open ? "closeMenu" : "openMenu"));
+  navigation.classList.toggle("is-open", open);
 });
 navigation.addEventListener("click", (event) => {
   if (event.target.closest("a")) closeMenu();
+});
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".site-header")) closeMenu();
 });
 document.addEventListener("keydown", (event) => {
   if (
@@ -68,48 +66,6 @@ document.addEventListener("keydown", (event) => {
     menuToggle.focus();
   }
 });
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".site-header")) closeMenu();
-});
-
-const colors = { lime: "#d2ed86", lilac: "#c4b0e6", peach: "#e8b091" };
-document.querySelectorAll(".swatch").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".swatch").forEach((swatch) => {
-      swatch.setAttribute("aria-pressed", String(swatch === button));
-    });
-    document
-      .querySelector(".hero-art")
-      .style.setProperty("--accent", colors[button.dataset.color]);
-  });
-});
-
-const filters = document.querySelectorAll(".filter");
-const projects = document.querySelectorAll(".project");
-filters.forEach((button) => {
-  button.addEventListener("click", () => {
-    const selected = button.dataset.filter;
-    filters.forEach((filter) =>
-      filter.setAttribute("aria-pressed", String(filter === button)),
-    );
-    projects.forEach((project) => {
-      const matches =
-        selected === "all" ||
-        project.dataset.category.split(" ").includes(selected);
-      project.hidden = !matches;
-    });
-    updateFilterStatus();
-  });
-});
-
-document.querySelector("#year").textContent = new Date().getFullYear();
-
-function updateFilterStatus() {
-  const visible = document.querySelectorAll(".project:not([hidden])").length;
-  document.querySelector("#filter-status").textContent =
-    `${visible} ${text("projectCount")}`;
-}
-
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => {
     applyLanguage(button.dataset.language);
@@ -119,17 +75,18 @@ document.querySelectorAll("[data-language]").forEach((button) => {
   });
 });
 
-const requestedLanguage = new URLSearchParams(location.search).get("lang");
-let savedLanguage;
+const requested = new URLSearchParams(location.search).get("lang");
+let saved;
 try {
-  savedLanguage = localStorage.getItem(preferenceKey);
+  saved = localStorage.getItem(preferenceKey);
 } catch {
-  /* Optional persistence. */
+  /* Optional preference. */
 }
 applyLanguage(
-  supportedLanguage(requestedLanguage)
-    ? requestedLanguage
-    : supportedLanguage(savedLanguage)
-      ? savedLanguage
+  supportedLanguage(requested)
+    ? requested
+    : supportedLanguage(saved)
+      ? saved
       : "es",
 );
+document.querySelector("#year").textContent = new Date().getFullYear();

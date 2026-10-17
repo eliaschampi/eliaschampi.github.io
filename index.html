@@ -4,23 +4,23 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="#f6f6ef" name="theme-color" />
+    <meta content="#f8f5ee" name="theme-color" />
     <title data-i18n="documentTitle">
-      Elias Champi — Código con intención. Interfaces con detalle.
+      Elias Champi — Programador, desde Cusco
     </title>
     <meta
-      content="Elias Champi, desarrollador full-stack en Cusco. Coedula, Faztore, Aeduca y librerías con Svelte, Rust, PHP y PostgreSQL."
+      content="El sitio personal de Elias Champi. Código, interfaces, Coedula, Faztore, Aeduca y las herramientas que construyo con Rust, Svelte, PHP y PostgreSQL."
       data-i18n-content="description"
       name="description"
     />
     <link href="https://eliaschampi.github.io/" rel="canonical" />
     <meta
-      content="Elias Champi — Código con intención. Interfaces con detalle."
+      content="Elias Champi — Programador, desde Cusco"
       data-i18n-content="documentTitle"
       property="og:title"
     />
     <meta
-      content="Elias Champi, desarrollador full-stack en Cusco. Coedula, Faztore, Aeduca y librerías con Svelte, Rust, PHP y PostgreSQL."
+      content="El sitio personal de Elias Champi. Código, interfaces, Coedula, Faztore, Aeduca y las herramientas que construyo con Rust, Svelte, PHP y PostgreSQL."
       data-i18n-content="description"
       property="og:description"
     />
@@ -34,8 +34,9 @@
       rel="preload"
       type="font/ttf"
     />
-    <link href="styles.css?v=6" rel="stylesheet" />
-    <script src="app.js?v=4" type="module"></script>
+    <link href="styles.css?v=7" rel="stylesheet" />
+    <link href="project-art.css?v=1" rel="stylesheet" />
+    <script src="app.js?v=5" type="module"></script>
   </head>
   <body>
     <a class="skip-link" href="#main"
@@ -47,7 +48,7 @@
         class="wordmark"
         data-i18n-aria-label="homeLabel"
         href="#"
-        ><span aria-hidden="true" class="brand-symbol">e.</span> elias champi</a
+        ><span aria-hidden="true" class="wordmark-dot">✳</span> elias.champi</a
       >
       <div class="header-controls">
         <div
@@ -79,8 +80,7 @@
           class="menu-toggle"
           data-i18n-aria-label="openMenu"
         >
-          <span data-menu-label="">Menú</span>
-          <span aria-hidden="true">＋</span>
+          <span data-menu-label="">Menú</span><span aria-hidden="true">＋</span>
         </button>
       </div>
       <nav
@@ -88,201 +88,109 @@
         data-i18n-aria-label="navLabel"
         id="navigation"
       >
-        <a href="#work"><span data-i18n="navWork">Proyectos </span></a>
-        <a href="#about"><span data-i18n="navAbout">Sobre mí </span></a>
-        <a href="cv.html?lang=es"
-          ><span data-i18n="navCv">CV </span><span>↗</span></a
-        >
-        <a class="nav-contact" href="#contact"
-          ><span data-i18n="navContact">Hablemos </span><span>↗</span></a
+        <a href="#work"><span data-i18n="navWork">Mi trabajo</span></a
+        ><a href="#about"><span data-i18n="navAbout">Sobre mí</span></a
+        ><a href="cv.html"><span data-i18n="navCv">CV</span></a
+        ><a href="#contact"
+          ><span data-i18n="navContact">Escribirme</span>
+          <span aria-hidden="true">↗</span></a
         >
       </nav>
     </header>
     <main id="main">
       <section aria-labelledby="hero-title" class="hero wrap">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="hero-role" data-i18n="heroRole">
-              Desarrollador full-stack · Cusco, Perú
-            </p>
-            <h1 data-i18n="heroTitle" id="hero-title">
-              Amo escribir<br />código.<br /><span class="muted"
-                >Cuido cada</span
-              ><br /><span class="muted">detalle.</span
-              ><span aria-hidden="true" class="headline-star">✳</span>
-            </h1>
-            <p>
-              <span data-i18n="intro"
-                >Soy Elias, desarrollador en Cusco. Construyo plataformas,
-                librerías e interfaces que combinan claridad, precisión y
-                belleza.</span
-              >
-            </p>
-            <div class="hero-actions">
-              <a class="button button-dark" href="#work"
-                ><span data-i18n="explore">Explorar proyectos </span
-                ><span aria-hidden="true">↗</span></a
-              ><a class="text-link" href="cv.html?lang=es"
-                ><span data-i18n="viewCv">Ver CV </span
-                ><span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </div>
-          <div
-            aria-label="Experimento interactivo de diseño"
-            class="hero-art"
-            data-i18n-aria-label="playLabel"
-          >
-            <div aria-hidden="true" class="art-grid"></div>
-            <span aria-hidden="true" class="art-orbit orbit-one"></span
-            ><span aria-hidden="true" class="art-orbit orbit-two"></span>
-            <div class="playground" id="playground">
-              <div class="playground-heading">
-                <span aria-hidden="true" class="mini-logo">✳</span
-                ><span
-                  ><span data-i18n="playHeading"
-                    >Un pequeño experimento.</span
-                  ></span
-                ><span aria-hidden="true" class="window-dots">•••</span>
-              </div>
-              <div class="playground-body">
-                <h2>
-                  <span data-i18n="playTitle"
-                    >Que se sienta<br /><em>bien hecho.</em></span
-                  >
-                </h2>
-                <div aria-hidden="true" class="sample-line">
-                  <span></span><span></span><span></span><span></span
-                  ><span></span><span></span><span></span><span></span
-                  ><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="playground-bottom">
-                  <div
-                    aria-label="Color del experimento"
-                    class="swatches"
-                    data-i18n-aria-label="accentLabel"
-                    role="group"
-                  >
-                    <button
-                      aria-label="Color lima"
-                      aria-pressed="true"
-                      class="swatch"
-                      data-color="lime"
-                      data-i18n-aria-label="limeLabel"
-                    ></button
-                    ><button
-                      aria-label="Color lila"
-                      aria-pressed="false"
-                      class="swatch"
-                      data-color="lilac"
-                      data-i18n-aria-label="lilacLabel"
-                    ></button
-                    ><button
-                      aria-label="Color durazno"
-                      aria-pressed="false"
-                      class="swatch"
-                      data-color="peach"
-                      data-i18n-aria-label="peachLabel"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="floating-tag">
-              <span aria-hidden="true">↖</span>
-              <span data-i18n="pointerLabel">Elias, en su elemento</span>
-            </div>
+        <div class="hero-copy">
+          <p class="hello" data-i18n="hello">Hola, soy</p>
+          <h1 id="hero-title">Elias<br /><em>Champi.</em></h1>
+          <p class="hero-role" data-i18n="heroRole">
+            Programador full-stack, desde Cusco, Perú.
+          </p>
+          <p class="hero-intro" data-i18n="intro">
+            Amo escribir código. Me gusta entender cómo funcionan las cosas,
+            construirlas y volver a afinarlas. Sobre todo, disfruto hacer
+            interfaces que se sientan bien.
+          </p>
+          <div class="hero-links">
+            <a class="text-link" href="#work"
+              ><span data-i18n="explore">Esto es lo que hago</span>
+              <span aria-hidden="true">↓</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/eliaschampi"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="heroGithub">Mi código en GitHub</span></a
+            >
           </div>
         </div>
-        <div class="stack-strip">
-          <span class=""
-            ><span data-i18n="toolkitLabel"
-              >Tecnologías con las que construyo</span
-            ></span
-          >
+        <aside class="personal-note">
+          <figure class="portrait">
+            <img
+              alt="Elias Champi"
+              data-i18n-alt="portraitAlt"
+              decoding="async"
+              height="700"
+              src="assets/elias-portrait.png"
+              width="700"
+            />
+            <figcaption>Elias, <span>Cusco.</span></figcaption>
+          </figure>
+          <p class="note-title">
+            <span data-i18n="noteTitle">Unas líneas sobre mí</span
+            ><span aria-hidden="true">↗</span>
+          </p>
+          <p class="note-text" data-i18n="noteText">
+            Entre plataformas educativas, mi propia tienda y librerías que nacen
+            de mis proyectos, siempre encuentro algo que quiero construir mejor.
+          </p>
+          <p class="note-signature" data-i18n="noteSignature">
+            Curiosidad, código y unos cuantos detalles.
+          </p>
+          <div aria-hidden="true" class="note-rule"></div>
+        </aside>
+        <div class="workbench">
+          <p data-i18n="stackLabel">En mi mesa, casi siempre:</p>
           <ul
             aria-label="Tecnologías principales"
-            data-i18n-aria-label="coreTech"
+            data-i18n-aria-label="stackAria"
           >
-            <li>
-              <span aria-hidden="true" class="tech-icon rust">R</span>Rust
-            </li>
-            <li>
-              <span aria-hidden="true" class="tech-icon php">php</span>PHP
-            </li>
-            <li>
-              <span aria-hidden="true" class="tech-icon svelte">S</span>Svelte
-            </li>
-            <li>
-              <span aria-hidden="true" class="tech-icon postgres">P</span
-              >PostgreSQL
-            </li>
-            <li>
-              <span aria-hidden="true" class="tech-icon ts">TS</span>TypeScript
-            </li>
+            <li>Rust</li>
+            <li>PHP</li>
+            <li>Svelte</li>
+            <li>PostgreSQL</li>
+            <li>TypeScript</li>
           </ul>
         </div>
       </section>
       <section aria-labelledby="work-title" class="work-section wrap" id="work">
-        <div class="section-kicker">
-          <span><span data-i18n="workLabel">Proyectos</span></span>
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow" data-i18n="workLabel">Mi trabajo</p>
+            <h2 data-i18n="workTitle" id="work-title">
+              Cosas a las que les he<br />dedicado tiempo.
+            </h2>
+          </div>
+          <p class="section-description" data-i18n="workIntro">
+            Proyectos propios y trabajo en educación. Cada uno me ha dado una
+            forma distinta de pensar el software.
+          </p>
         </div>
-        <div class="section-heading">
-          <h2 id="work-title">
-            <span data-i18n="workTitle">Hecho para usarse.</span><br /><span
-              class="muted"
-              ><span data-i18n="workSubtitle"
-                >Diseñado para disfrutarse.</span
-              ></span
-            >
-          </h2>
-          <a
-            class="text-link"
-            href="https://github.com/eliaschampi"
-            rel="noopener noreferrer"
-            target="_blank"
-            ><span data-i18n="allRepos">Mis librerías en GitHub </span
-            ><span aria-hidden="true">↗</span></a
-          >
-        </div>
-        <div
-          aria-label="Filtrar proyectos"
-          class="project-filters"
-          data-i18n-aria-label="filterLabel"
-          role="group"
-        >
-          <button aria-pressed="true" class="filter" data-filter="all">
-            <span data-i18n="filterAll">Todo </span></button
-          ><button aria-pressed="false" class="filter" data-filter="interface">
-            <span data-i18n="filterInterfaces">Interfaces</span></button
-          ><button aria-pressed="false" class="filter" data-filter="fullstack">
-            <span data-i18n="filterFullstack">Full-stack</span></button
-          ><button aria-pressed="false" class="filter" data-filter="tools">
-            <span data-i18n="filterTools">Librerías y herramientas</span>
-          </button>
-          <p aria-live="polite" class="sr-only" id="filter-status"></p>
-        </div>
-        <div class="project-grid">
-          <article
-            class="project"
-            data-category="fullstack"
-            id="project-coedula"
-          >
+        <div class="project-stories">
+          <article class="project-story" id="project-coedula">
             <a
               aria-label="Coedula — sitio institucional Carrión"
               class="project-visual coedula-visual"
               data-i18n-aria-label="coedulaAria"
-              href="https://carrioneduca.edu.pe/"
+              href="https://carrioncusco.net.pe/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <span aria-hidden="true" class="visual-arrow">↗</span>
               <div aria-hidden="true" class="coedula-composition">
                 <div class="coedula-wordmark">coedula<span>◈</span></div>
                 <div class="coedula-panel">
                   <div class="coedula-system">
                     <span class="system-core">c.</span
-                    ><svg preserveaspectratio="none" viewbox="0 0 300 130">
+                    ><svg preserveAspectRatio="none" viewBox="0 0 300 130">
                       <path
                         d="M150 10V40M45 62V40H255V62M150 40V62M45 91V108H255V91M150 108V120"
                       ></path>
@@ -299,34 +207,36 @@
                 </div>
               </div>
             </a>
-            <div class="project-info">
-              <div>
-                <h3>Coedula</h3>
-                <p>
-                  <span data-i18n="coedulaSummary"
-                    >Matrículas, asistencia, pagos y evaluaciones para Academia
-                    Carrión.</span
-                  >
-                </p>
-              </div>
+            <div class="project-copy">
+              <h3>Coedula</h3>
+              <p class="project-description" data-i18n="coedulaSummary">
+                Con Coedula conecto el día a día de Academia Carrión:
+                matrículas, asistencia, pagos y evaluaciones. Un sistema que
+                reúne procesos que necesitan entenderse entre sí.
+              </p>
+              <p class="project-note" data-i18n="coedulaNote">
+                Me interesa que la complejidad quede en el código y la claridad,
+                en la pantalla.
+              </p>
+              <ul
+                aria-label="Tecnologías"
+                class="tech-list"
+                data-i18n-aria-label="stackAria"
+              >
+                <li>SvelteKit</li>
+                <li>TypeScript</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://carrioncusco.net.pe/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="coedulaLink">Abrir Coedula ↗</span></a
+              >
             </div>
-            <div class="tags">
-              <span>SvelteKit</span><span>TypeScript</span
-              ><span>PostgreSQL</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://carrioneduca.edu.pe/"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span data-i18n="institutionalLink">Visitar Carrión ↗</span></a
-            >
           </article>
-          <article
-            class="project"
-            data-category="interface fullstack"
-            id="project-faztore"
-          >
+          <article class="project-story" id="project-faztore">
             <a
               aria-label="Visitar mi tienda Faztore"
               class="project-visual store-visual"
@@ -334,7 +244,7 @@
               href="https://faztore.com/"
               rel="noopener noreferrer"
               target="_blank"
-              ><span aria-hidden="true" class="visual-arrow">↗</span>
+            >
               <div aria-hidden="true" class="store-composition">
                 <div class="store-wordmark">faztore<span>↗</span></div>
                 <div class="store-message">
@@ -343,7 +253,7 @@
                   >
                 </div>
                 <div class="store-product">
-                  <svg fill="none" viewbox="0 0 140 145">
+                  <svg fill="none" viewBox="0 0 140 145">
                     <path
                       d="M30 78V63C30 5 112 5 112 63V78"
                       stroke="#3d3935"
@@ -394,33 +304,35 @@
                 </div>
               </div>
             </a>
-            <div class="project-info">
-              <div>
-                <h3>Faztore</h3>
-                <p>
-                  <span data-i18n="faztoreSummary"
-                    >Mi tienda de tecnología: del catálogo a la gestión de
-                    productos, inventario y ventas.</span
-                  >
-                </p>
-              </div>
+            <div class="project-copy">
+              <h3>Faztore</h3>
+              <p class="project-description" data-i18n="faztoreSummary">
+                Faztore es mi tienda. La construyo desde el catálogo hasta la
+                gestión de productos, inventario y ventas. Aquí se encuentran mi
+                gusto por la tecnología y mi forma de cuidar una experiencia.
+              </p>
+              <p class="project-note" data-i18n="faztoreNote">
+                Un proyecto mío, con decisiones mías y mucho código detrás.
+              </p>
+              <ul
+                aria-label="Tecnologías"
+                class="tech-list"
+                data-i18n-aria-label="stackAria"
+              >
+                <li>SvelteKit</li>
+                <li>Lumi UI</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://faztore.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="faztoreLink">Visitar mi tienda ↗</span></a
+              >
             </div>
-            <div class="tags">
-              <span>SvelteKit</span><span>Lumi UI</span><span>PostgreSQL</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://faztore.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span data-i18n="storeLink">Visitar la tienda ↗</span></a
-            >
           </article>
-          <article
-            class="project"
-            data-category="fullstack"
-            id="project-aeduca"
-          >
+          <article class="project-story" id="project-aeduca">
             <a
               aria-label="Aeduca — sitio institucional Carrión"
               class="project-visual aeduca-visual"
@@ -428,7 +340,7 @@
               href="https://carrioneduca.edu.pe/"
               rel="noopener noreferrer"
               target="_blank"
-              ><span aria-hidden="true" class="visual-arrow">↗</span>
+            >
               <div aria-hidden="true" class="education-art">
                 <div class="education-wordmark">aeduca<span>↗</span></div>
                 <div class="education-card">
@@ -442,403 +354,204 @@
                 </div>
               </div>
             </a>
-            <div class="project-info">
-              <div>
-                <h3>Aeduca</h3>
-                <p>
-                  <span data-i18n="aeducaSummary"
-                    >Gestión académica y administrativa, con un espacio para
-                    docentes y estudiantes.</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="tags">
-              <span>PHP / Laravel</span><span>Svelte / Inertia</span
-              ><span>PostgreSQL</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://carrioneduca.edu.pe/"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span data-i18n="institutionalLink">Visitar Carrión ↗</span></a
-            >
-          </article>
-          <article
-            class="project"
-            data-category="interface tools"
-            id="project-lumi"
-          >
-            <a
-              aria-label="Explorar Lumi UI"
-              class="project-visual lumi-visual"
-              data-i18n-aria-label="lumiAria"
-              href="https://eliaschampi.github.io/lumi/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span aria-hidden="true" class="visual-arrow">↗</span>
-              <div aria-hidden="true" class="lumi-composition">
-                <div class="lumi-title">lumi<span>✳</span></div>
-                <div class="lumi-widget">
-                  <div class="widget-top">
-                    <span><span data-i18n="appearance">Apariencia</span></span
-                    ><span>◐</span>
-                  </div>
-                  <div class="widget-options">
-                    <span><span data-i18n="light">Claro</span></span
-                    ><span class="active"
-                      ><span data-i18n="dark">Oscuro</span></span
-                    ><span><span data-i18n="auto">Auto</span></span>
-                  </div>
-                  <div class="widget-chart">
-                    <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
-                  </div>
-                </div>
-                <span class="lumi-pill">Svelte 5 <span>↗</span></span>
-              </div>
-            </a>
-            <div class="project-info">
-              <div>
-                <h3>Lumi UI</h3>
-                <p>
-                  <span data-i18n="lumiSummary"
-                    >Componentes y herramientas de diseño para crear interfaces
-                    consistentes con Svelte.</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="tags">
-              <span>Svelte 5</span><span>TypeScript</span
-              ><span
-                ><span data-i18n="designSystems">Sistemas de diseño</span></span
+            <div class="project-copy">
+              <h3>Aeduca</h3>
+              <p class="project-description" data-i18n="aeducaSummary">
+                Aeduca reúne la gestión académica y administrativa con el
+                espacio de docentes y estudiantes. Combino Laravel, Svelte y
+                PostgreSQL para conectar las distintas partes de la experiencia
+                educativa.
+              </p>
+              <p class="project-note" data-i18n="aeducaNote">
+                La educación es un hilo que atraviesa buena parte de mi trabajo.
+              </p>
+              <ul
+                aria-label="Tecnologías"
+                class="tech-list"
+                data-i18n-aria-label="stackAria"
               >
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/eliaschampi/lumi-ui"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span data-i18n="sourceLink">Ver código ↗</span></a
-            >
-          </article>
-          <article class="project" data-category="tools" id="project-omr">
-            <a
-              aria-label="Explorar la implementación pública de OMR"
-              class="project-visual omr-visual"
-              data-i18n-aria-label="omrAria"
-              href="https://github.com/eliaschampi/nextya"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span aria-hidden="true" class="visual-arrow">↗</span>
-              <div aria-hidden="true" class="omr-composition">
-                <div class="answer-sheet">
-                  <div class="sheet-corners"></div>
-                  <span class="mono"
-                    ><span data-i18n="assessment">EVALUACIÓN / 001</span></span
-                  >
-                  <h4>
-                    <span data-i18n="sheetTitle"
-                      >Cada respuesta<br />tiene una historia.</span
-                    >
-                  </h4>
-                  <div class="answer-rows">
-                    <div>
-                      <span>01</span><i></i><i class="filled"></i><i></i><i></i>
-                    </div>
-                    <div>
-                      <span>02</span><i class="filled"></i><i></i><i></i><i></i>
-                    </div>
-                    <div>
-                      <span>03</span><i></i><i></i><i></i><i class="filled"></i>
-                    </div>
-                    <div>
-                      <span>04</span><i></i><i></i><i class="filled"></i><i></i>
-                    </div>
-                  </div>
-                  <div class="scan-line"></div>
-                </div>
-                <div class="omr-result mono">
-                  <br /><span class="result-code">[ B, A, D, C ]</span>
-                </div>
-              </div>
-            </a>
-            <div class="project-info">
-              <div>
-                <h3>OMR</h3>
-                <p>
-                  <span data-i18n="omrSummary"
-                    >Lectura de hojas de respuestas y procesamiento automático
-                    de evaluaciones.</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="tags">
-              <span>Rust</span><span>OpenCV</span><span>TypeScript</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/eliaschampi/nextya/tree/main/src/lib/omrProcessor"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span data-i18n="omrSource"
-                >Ver la implementación pública ↗</span
-              ></a
-            >
-          </article>
-          <article class="project" data-category="tools" id="project-report">
-            <a
-              aria-label="Explorar report-rs en GitHub"
-              class="project-visual rust-visual"
-              data-i18n-aria-label="reportAria"
-              href="https://github.com/eliaschampi/report-rs"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span aria-hidden="true" class="visual-arrow">↗</span>
-              <div aria-hidden="true" class="rust-composition">
-                <span class="rust-mark">R<span>✳</span></span>
-                <div class="rust-console mono">
-                  <div><i></i> report-rs</div>
-                  <p>
-                    <span>$</span> cargo run --release<br /><b>JSON</b> →
-                    <b>LAYOUT</b> → <b>PDF</b>
-                  </p>
-                  <span class="console-note"
-                    ><span data-i18n="precise"
-                      >Precisión por diseño.</span
-                    ></span
-                  >
-                </div>
-                <span class="report-sheet"
-                  ><i></i><i></i><i></i><i></i><b>PDF ↗</b></span
-                >
-              </div>
-            </a>
-            <div class="project-info">
-              <div>
-                <h3>report-rs</h3>
-                <p>
-                  <span data-i18n="reportSummary"
-                    >Generación de comprobantes e informes PDF a partir de datos
-                    estructurados.</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="tags">
-              <span>Rust</span
-              ><span><span data-i18n="pdfTag">Generación de PDF</span></span
-              ><span
-                ><span data-i18n="toolsTag"
-                  >Herramientas de desarrollo</span
-                ></span
+                <li>Laravel</li>
+                <li>Svelte / Inertia</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://carrioneduca.edu.pe/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="aeducaLink">Abrir Aeduca ↗</span></a
               >
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/eliaschampi/report-rs"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span data-i18n="sourceLink">Ver código ↗</span></a
-            >
-          </article>
-          <article
-            class="project compact-project"
-            data-category="tools"
-            id="project-tinymed"
-          >
-            <a
-              aria-label="Explorar Tinymed en GitHub"
-              class="compact-visual tinymed-visual"
-              data-i18n-aria-label="tinymedAria"
-              href="https://github.com/eliaschampi/tinymed"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span aria-hidden="true" class="compact-symbol media-symbol"
-                >◫</span
-              >
-              <div>
-                <h3>Tinymed</h3>
-                <p>
-                  <span data-i18n="tinymedSummary"
-                    >Procesamiento, validación<br />y variantes de
-                    imágenes.</span
-                  >
-                </p>
-              </div>
-              <span aria-hidden="true" class="compact-arrow">↗</span></a
-            >
-            <div class="tags">
-              <span>TypeScript</span><span>Sharp</span
-              ><span
-                ><span data-i18n="mediaTag"
-                  >Procesamiento de imágenes</span
-                ></span
-              >
-            </div>
-          </article>
-          <article class="project compact-project" data-category="tools">
-            <a
-              aria-label="Explorar Naipe en GitHub"
-              class="compact-visual naipe-visual"
-              data-i18n-aria-label="naipeAria"
-              href="https://github.com/eliaschampi/naipe"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><span aria-hidden="true" class="compact-symbol playing-card"
-                >A<br />♠</span
-              >
-              <div>
-                <h3>Naipe</h3>
-                <p>
-                  <span data-i18n="naipeSummary"
-                    >Cuatro juegos de cartas.<br />Rust y WebAssembly en
-                    juego.</span
-                  >
-                </p>
-              </div>
-              <span aria-hidden="true" class="compact-arrow">↗</span></a
-            >
-            <div class="tags">
-              <span>Rust</span><span>WebAssembly</span><span>TypeScript</span>
             </div>
           </article>
         </div>
       </section>
-      <section aria-labelledby="about-title" class="about-section" id="about">
-        <div class="wrap">
-          <div class="section-kicker">
-            <span><span data-i18n="aboutLabel">Sobre mí</span></span>
+      <section aria-labelledby="tools-title" class="tools-section" id="tools">
+        <div class="wrap tools-grid">
+          <div class="tools-intro">
+            <p class="eyebrow" data-i18n="toolsLabel">Mis herramientas</p>
+            <h2 data-i18n="toolsTitle" id="tools-title">
+              También construyo<br />las pequeñas piezas.
+            </h2>
+            <p data-i18n="toolsIntro">
+              Me gusta que mis proyectos compartan buenas bases. Estas son
+              algunas de las librerías y herramientas en las que trabajo.
+            </p>
           </div>
-          <div class="about-grid">
-            <div>
-              <h2 id="about-title">
-                <span data-i18n="aboutTitle">Lógica para construir.</span
-                ><br /><span class="muted"
-                  ><span data-i18n="aboutSubtitle"
-                    >Sensibilidad para diseñar.</span
-                  ></span
-                >
-              </h2>
-              <div aria-hidden="true" class="about-monogram">
-                <span>ec</span><i>✳</i>
+          <div class="library-list">
+            <article class="library-row" id="project-lumi">
+              <span aria-hidden="true" class="library-mark mark-lumi">L</span>
+              <div class="library-copy">
+                <h3>Lumi UI</h3>
+                <p data-i18n="lumiSummary">
+                  Mi librería de componentes para Svelte. Un lugar para cuidar
+                  el lenguaje visual que comparten mis proyectos.
+                </p>
+                <span class="library-stack">Svelte · TypeScript</span>
               </div>
-            </div>
-            <div class="about-copy">
-              <p class="large-copy">
-                <span data-i18n="aboutStatement"
-                  >Me importa cómo funciona.<br />Y cómo se siente usarlo.</span
-                >
-              </p>
-              <p>
-                <span data-i18n="aboutIntro"
-                  >Soy Elias Champi Hancco, desarrollador full-stack en Cusco,
-                  Perú. Me apasiona escribir código y convertir ideas complejas
-                  en experiencias claras y cuidadas.</span
-                >
-              </p>
-              <p>
-                <span data-i18n="aboutHistory"
-                  >Entre 2018 y 2026 lideré tecnología en AEDUCA, desarrollando
-                  sistemas de gestión, aprendizaje virtual y evaluación
-                  automatizada. Esa experiencia sigue presente en Coedula,
-                  Aeduca y las herramientas que construyo.</span
-                >
-              </p>
-              <p>
-                <span data-i18n="aboutCraft"
-                  >Faztore también es mi tienda: un lugar donde puedo unir
-                  tecnología, producto y diseño. Desde una consulta a PostgreSQL
-                  hasta el estado de un botón, disfruto cuidar cada
-                  detalle.</span
-                >
-              </p>
-              <div class="about-facts">
-                <div>
-                  <strong>7+</strong
-                  ><span
-                    ><span data-i18n="yearsLabel"
-                      >años en tecnología educativa</span
-                    ></span
-                  >
-                </div>
-                <div>
-                  <strong
-                    ><span data-i18n="craftFact">Diseño ↔ Código</span></strong
-                  ><span
-                    ><span data-i18n="craftFactLabel"
-                      >una conversación constante</span
-                    ></span
-                  >
-                </div>
-              </div>
-              <a class="text-link" href="cv.html?lang=es"
-                ><span data-i18n="experienceLink">Conoce mi experiencia </span
-                ><span aria-hidden="true">↗</span></a
+              <a
+                class="library-link"
+                href="https://eliaschampi.github.io/lumi/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="lumiLink">Explorar Lumi</span>
+                <span aria-hidden="true">↗</span></a
               >
-            </div>
-          </div>
-          <div class="experience-section">
-            <div class="experience-label">
-              <span class="mono"
-                ><span data-i18n="experienceLabel"
-                  >EXPERIENCIA Y FORMACIÓN</span
-                ></span
+            </article>
+            <article class="library-row" id="project-omr">
+              <span aria-hidden="true" class="library-mark mark-omr">◎</span>
+              <div class="library-copy">
+                <h3>OMR</h3>
+                <p data-i18n="omrSummary">
+                  Lectura óptica de respuestas: trabajo con un motor en Rust y
+                  una implementación anterior en TypeScript y OpenCV.
+                </p>
+                <span class="library-stack">Rust · OpenCV</span>
+              </div>
+              <a
+                class="library-link"
+                href="https://github.com/eliaschampi/nextya/tree/main/src/lib/omrProcessor"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="omrLink">Ver la versión TypeScript</span>
+                <span aria-hidden="true">↗</span></a
               >
-              <p>
-                <span data-i18n="learningStatement"
-                  >Siempre creando.<br />Siempre aprendiendo.</span
-                >
-              </p>
+            </article>
+            <article class="library-row" id="project-report">
+              <span aria-hidden="true" class="library-mark mark-report">R</span>
+              <div class="library-copy">
+                <h3>report-rs</h3>
+                <p data-i18n="reportSummary">
+                  Un motor en Rust para convertir datos estructurados en
+                  comprobantes e informes PDF.
+                </p>
+                <span class="library-stack">Rust · PDF</span>
+              </div>
+              <a
+                class="library-link"
+                href="https://github.com/eliaschampi/report-rs"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="sourceLink">Ver código</span>
+                <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="library-row" id="project-tinymed">
+              <span aria-hidden="true" class="library-mark mark-tinymed"
+                >◫</span
+              >
+              <div class="library-copy">
+                <h3>Tinymed</h3>
+                <p data-i18n="tinymedSummary">
+                  Una pequeña librería para validar, procesar y preparar
+                  imágenes para mis aplicaciones.
+                </p>
+                <span class="library-stack">TypeScript · Sharp</span>
+              </div>
+              <a
+                class="library-link"
+                href="https://github.com/eliaschampi/tinymed"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="sourceLink">Ver código</span>
+                <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="library-row" id="project-naipe">
+              <span aria-hidden="true" class="library-mark mark-naipe">♠</span>
+              <div class="library-copy">
+                <h3>Naipe</h3>
+                <p data-i18n="naipeSummary">
+                  También hay espacio para jugar: cuatro juegos de cartas con
+                  Rust y WebAssembly, y una interfaz en TypeScript.
+                </p>
+                <span class="library-stack">Rust · WebAssembly</span>
+              </div>
+              <a
+                class="library-link"
+                href="https://github.com/eliaschampi/naipe"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="sourceLink">Ver código</span>
+                <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="about-title"
+        class="about-section wrap"
+        id="about"
+      >
+        <div class="about-heading">
+          <p class="eyebrow" data-i18n="aboutLabel">Un poco de contexto</p>
+          <h2 data-i18n="aboutTitle" id="about-title">
+            Detrás del código,<br />también estoy yo.
+          </h2>
+          <span aria-hidden="true" class="personal-asterisk">✳</span>
+        </div>
+        <div class="about-content">
+          <p data-i18n="aboutHistory">
+            Durante más de siete años lideré tecnología en AEDUCA. Trabajé en
+            gestión escolar, aprendizaje virtual y evaluación automatizada. Esa
+            experiencia sigue presente en las plataformas y herramientas que
+            construyo.
+          </p>
+          <p data-i18n="aboutPersonal">
+            No todo pasa frente al editor. Mi experiencia también incluye la
+            coordinación de locales de votación en ONPE. Me gusta trabajar con
+            sistemas y con las personas que los usan.
+          </p>
+          <p class="language-note" data-i18n="aboutLanguages">
+            Español, quechua y el código como otro idioma para crear.
+          </p>
+          <div class="timeline">
+            <div class="timeline-row">
+              <span class="timeline-date">2018–2026</span>
+              <div>
+                <h3>AEDUCA</h3>
+                <p data-i18n="aeducaRole">
+                  Responsable de Tecnología e Informática
+                </p>
+              </div>
             </div>
-            <div class="experience-list">
-              <div class="experience-row">
-                <span class="mono">2018 — 2026</span>
-                <div>
-                  <h3>
-                    <span data-i18n="jobTitle"
-                      >Responsable de Tecnología e Informática</span
-                    >
-                  </h3>
-                  <p>Asociación Educativa Carrión · AEDUCA</p>
-                </div>
-              </div>
-              <div class="experience-row">
-                <span class="mono">2022 — 2023</span>
-                <div>
-                  <h3>
-                    <span data-i18n="bootcampTitle"
-                      >Bootcamp de Desarrollo Backend</span
-                    >
-                  </h3>
-                  <p>
-                    <span data-i18n="bootcampProvider"
-                      >Silabuz + MTPE · 400 horas pedagógicas</span
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="experience-row">
-                <span class="mono">2015 — 2018</span>
-                <div>
-                  <h3>
-                    <span data-i18n="educationTitle"
-                      >Computación e Informática</span
-                    >
-                  </h3>
-                  <p>
-                    <span data-i18n="educationProvider"
-                      >Instituto Tecnológico Wernher von Braun · Título
-                      profesional técnico</span
-                    >
-                  </p>
-                </div>
+            <div class="timeline-row">
+              <span class="timeline-date">2026</span>
+              <div>
+                <h3>ONPE · ODPE Cusco</h3>
+                <p data-i18n="onpeRole">
+                  Coordinador / Responsable de Local de Votación
+                </p>
+                <p class="timeline-detail" data-i18n="onpeDates">
+                  Mar–abr · may–jun · sep–oct de 2026
+                </p>
               </div>
             </div>
           </div>
+          <a class="text-link" href="cv.html"
+            ><span data-i18n="cvLink">Mi experiencia, con más detalle</span>
+            <span aria-hidden="true">↗</span></a
+          >
         </div>
       </section>
       <section
@@ -846,63 +559,40 @@
         class="contact-section wrap"
         id="contact"
       >
-        <div class="section-kicker">
-          <span><span data-i18n="contactLabel">Hablemos</span></span>
-        </div>
-        <div class="contact-heading">
-          <h2 id="contact-title">
-            <span data-i18n="contactTitle"
-              >Las buenas ideas<br />empiezan <em>con un hola.</em></span
-            >
+        <p class="eyebrow" data-i18n="contactLabel">Seguimos conversando</p>
+        <div class="contact-grid">
+          <h2 data-i18n="contactTitle" id="contact-title">
+            Si algo de aquí<br />te llamó la atención…
           </h2>
-          <a
-            aria-label="Escribir a Elias Champi"
-            class="contact-circle"
-            data-i18n-aria-label="emailAria"
-            href="mailto:eliaschampi04@gmail.com"
-            ><span aria-hidden="true">↗</span></a
-          >
-        </div>
-        <div class="contact-bottom">
-          <a class="email-link" href="mailto:eliaschampi04@gmail.com"
-            >eliaschampi04@gmail.com <span aria-hidden="true">↗</span></a
-          >
-          <div class="social-links">
-            <a
-              href="https://github.com/eliaschampi"
-              rel="noopener noreferrer"
-              target="_blank"
-              >GitHub ↗</a
-            ><a
-              href="https://www.linkedin.com/in/eliaschampi"
-              rel="noopener noreferrer"
-              target="_blank"
-              >LinkedIn ↗</a
-            ><a href="cv.html?lang=es"><span data-i18n="navCv">CV </span>↗</a>
+          <div>
+            <p data-i18n="contactText">
+              Me gustará leerte. Podemos conversar de código, interfaces o de lo
+              próximo que estás construyendo.
+            </p>
+            <a class="email-link" href="mailto:eliaschampi04@gmail.com"
+              >eliaschampi04@gmail.com <span aria-hidden="true">↗</span></a
+            >
+            <div class="social-links">
+              <a
+                href="https://github.com/eliaschampi"
+                rel="noopener noreferrer"
+                target="_blank"
+                >GitHub ↗</a
+              ><a
+                href="https://www.linkedin.com/in/eliaschampi"
+                rel="noopener noreferrer"
+                target="_blank"
+                >LinkedIn ↗</a
+              ><a href="cv.html"><span data-i18n="navCv">CV</span> ↗</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer wrap mono">
-      <span>© <span id="year">2026</span> ELIAS CHAMPI</span
-      ><a href="#"><span data-i18n="backTop">Volver arriba ↑</span></a>
+    <footer class="site-footer wrap">
+      <span>© <span id="year">2026</span> Elias Champi</span>
+      <p data-i18n="footerNote">Mi rincón en internet, hecho con calma.</p>
+      <a href="#"><span data-i18n="backTop">Volver arriba ↑</span></a>
     </footer>
-    <noscript
-      ><p class="noscript-note">
-        <span data-i18n="noscript"
-          >Se muestran todos los proyectos. Los filtros y el selector de idioma
-          requieren JavaScript.</span
-        >
-      </p></noscript
-    >
   </body>
-  <div
-    id="codex-browser-sidebar-comments-root"
-    style="
-      position: fixed;
-      inset: 0px;
-      pointer-events: none;
-      z-index: 2147483647;
-    "
-  ></div>
 </html>
