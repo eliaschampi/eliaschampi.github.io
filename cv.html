@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Elias Champi Hancco — desarrollador full-stack en Cusco, Perú. Interfaces, plataformas educativas y bibliotecas de software."
+    />
+    <meta name="theme-color" content="#f3f0e7" />
+    <title>Elias Champi Hancco — CV en español</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #faf8f1;
+        --canvas: #e8e6dd;
+        --ink: #252b28;
+        --muted: #62675e;
+        --line: #d9dbd0;
+        --accent: #586745;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--canvas);
+        font:
+          14px/1.55 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        color: var(--accent);
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 5px;
+      }
+      .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: min(900px, calc(100% - 48px));
+        margin: 28px auto;
+      }
+      .toolbar-controls {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .language-toggle {
+        display: flex;
+        padding: 3px;
+        border: 1px solid var(--line);
+        border-radius: 100px;
+      }
+      .language-toggle button {
+        padding: 7px 9px;
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .language-toggle button[aria-pressed="true"] {
+        background: var(--ink);
+        color: var(--paper);
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .back {
+        text-decoration: none;
+        font-size: 13px;
+      }
+      .back .back-arrow {
+        margin-right: 8px;
+      }
+      button {
+        padding: 12px 19px;
+        border: 1px solid var(--ink);
+        border-radius: 100px;
+        background: var(--ink);
+        color: var(--paper);
+        font: inherit;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .sheet {
+        width: min(900px, calc(100% - 48px));
+        margin: 0 auto 48px;
+        padding: 56px 60px 46px;
+        background: var(--paper);
+        box-shadow: 0 12px 50px #252b280c;
+      }
+      .masthead {
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--ink);
+      }
+      .eyebrow,
+      h2,
+      .section-label {
+        margin: 0;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+      }
+      .eyebrow {
+        color: var(--accent);
+      }
+      h1 {
+        margin: 13px 0 9px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(35px, 5.5vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        font-weight: 400;
+      }
+      .role {
+        margin: 0;
+        font-size: 15px;
+      }
+      .location {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 172px 1fr;
+        gap: 36px;
+        padding-top: 30px;
+      }
+      aside {
+        padding-right: 22px;
+        border-right: 1px solid var(--line);
+      }
+      section + section {
+        margin-top: 24px;
+      }
+      h2 {
+        margin-bottom: 11px;
+        color: var(--accent);
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      .contact {
+        display: grid;
+        gap: 8px;
+        font-size: 11px;
+      }
+      .contact a {
+        overflow-wrap: anywhere;
+        text-decoration-thickness: 1px;
+        text-decoration-color: var(--line);
+      }
+      .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .stack li {
+        padding: 3px 7px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        font-size: 11px;
+      }
+      .small {
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.65;
+      }
+      .languages {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+      }
+      .languages li + li {
+        margin-top: 4px;
+      }
+      .languages span {
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .intro {
+        font-size: 13px;
+        line-height: 1.65;
+      }
+      h3 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 600;
+      }
+      .position {
+        margin: 3px 0 4px;
+        font-size: 12px;
+      }
+      .date {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 10px;
+        font-variant-numeric: tabular-nums;
+      }
+      .achievements {
+        margin: 0;
+        padding-left: 15px;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      .achievements li + li {
+        margin-top: 6px;
+      }
+      .entry + .entry {
+        margin-top: 18px;
+      }
+      .entry p:last-child {
+        margin-bottom: 0;
+      }
+      .education h3 {
+        font-size: 12px;
+      }
+      .education .position {
+        font-size: 11px;
+      }
+      .education .date {
+        margin-bottom: 5px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding-top: 20px;
+        margin-top: 26px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: 0.04em;
+      }
+      .footer a {
+        text-decoration: none;
+      }
+      @media (max-width: 650px) {
+        .toolbar {
+          width: calc(100% - 32px);
+          margin: 18px auto;
+          flex-wrap: wrap;
+          gap: 14px;
+        }
+        .toolbar-controls {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .contact-section {
+          grid-column: 1 / -1;
+        }
+        .sheet {
+          width: calc(100% - 24px);
+          padding: 30px 25px;
+          margin-bottom: 24px;
+        }
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 27px;
+        }
+        aside {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          padding: 0 0 23px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+        aside section + section {
+          margin-top: 0;
+        }
+        .contact {
+          font-size: 12px;
+        }
+        .footer {
+          flex-wrap: wrap;
+        }
+      }
+      @page {
+        size: A4;
+        margin: 15mm 15mm 13mm;
+      }
+      @media print {
+        body {
+          background: #fff;
+          font-size: 10pt;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background: #fff;
+          box-shadow: none;
+        }
+        .masthead {
+          padding-bottom: 6mm;
+        }
+        h1 {
+          margin: 3mm 0 2mm;
+          font-size: 31pt;
+        }
+        .role {
+          font-size: 10pt;
+        }
+        .location {
+          font-size: 8pt;
+        }
+        .layout {
+          grid-template-columns: 39mm 1fr;
+          gap: 7mm;
+          padding-top: 7mm;
+        }
+        aside {
+          display: block;
+          padding: 0 5mm 0 0;
+          border-right: 1px solid var(--line);
+          border-bottom: 0;
+        }
+        section + section {
+          margin-top: 5mm;
+        }
+        aside section + section {
+          margin-top: 6mm;
+        }
+        h2,
+        .eyebrow {
+          font-size: 6.8pt;
+        }
+        h2 {
+          margin-bottom: 2.5mm;
+        }
+        .contact {
+          gap: 2mm;
+          font-size: 7.4pt;
+        }
+        .stack {
+          gap: 1.3mm;
+        }
+        .stack li {
+          padding: 1mm 1.5mm;
+          font-size: 7.3pt;
+        }
+        .small {
+          font-size: 7.3pt;
+        }
+        .languages {
+          font-size: 8pt;
+        }
+        .languages span {
+          font-size: 7pt;
+        }
+        .intro {
+          font-size: 8.8pt;
+          line-height: 1.55;
+        }
+        h3 {
+          font-size: 9.3pt;
+        }
+        .position {
+          font-size: 8pt;
+        }
+        .date {
+          font-size: 7pt;
+          margin-bottom: 2mm;
+        }
+        .achievements {
+          font-size: 8pt;
+          line-height: 1.5;
+        }
+        .achievements li + li {
+          margin-top: 1.5mm;
+        }
+        .entry + .entry {
+          margin-top: 4mm;
+        }
+        .education h3 {
+          font-size: 8pt;
+        }
+        .education .position {
+          font-size: 7.5pt;
+        }
+        .footer {
+          padding-top: 4mm;
+          margin-top: 6mm;
+          font-size: 6.8pt;
+        }
+        .entry,
+        section,
+        .masthead {
+          break-inside: avoid;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="toolbar"
+      aria-label="Acciones del CV"
+      data-i18n-aria="cvActions"
+    >
+      <a class="back" id="back-portfolio" href="./index.html?lang=es"
+        ><span class="back-arrow" aria-hidden="true">←</span
+        ><span data-i18n="back">Volver al portafolio</span></a
+      >
+      <div class="toolbar-controls">
+        <div
+          class="language-toggle"
+          role="group"
+          aria-label="Idioma del CV"
+          data-i18n-aria="languageControl"
+        >
+          <button
+            type="button"
+            data-language="es"
+            aria-label="Cambiar a español"
+            data-i18n-aria="spanishControl"
+            aria-pressed="true"
+          >
+            ES
+          </button>
+          <button
+            type="button"
+            data-language="en"
+            aria-label="Cambiar a inglés"
+            data-i18n-aria="englishControl"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+        <button type="button" id="print-cv" data-i18n="print">
+          Imprimir / Guardar PDF
+        </button>
+      </div>
+    </nav>
+    <article
+      class="sheet"
+      aria-label="CV de Elias Champi Hancco"
+      data-i18n-aria="cvLabel"
+    >
+      <header class="masthead">
+        <p class="eyebrow">CV</p>
+        <h1>Elias Champi Hancco</h1>
+        <p class="role" data-i18n="role">
+          Desarrollador full-stack · Tecnología educativa
+        </p>
+        <p class="location" data-i18n="location">Cusco, Perú</p>
+      </header>
+      <div class="layout">
+        <aside
+          aria-label="Contacto, proyectos y habilidades"
+          data-i18n-aria="sidebarLabel"
+        >
+          <section class="contact-section">
+            <h2 data-i18n="contact">Contacto</h2>
+            <div class="contact">
+              <a href="mailto:eliaschampi04@gmail.com"
+                >eliaschampi04@gmail.com</a
+              >
+              <a href="https://github.com/eliaschampi"
+                >github.com/eliaschampi</a
+              >
+              <a href="https://www.linkedin.com/in/eliaschampi"
+                >linkedin.com/in/eliaschampi</a
+              >
+              <a href="https://eliaschampi.github.io">eliaschampi.github.io</a>
+            </div>
+          </section>
+          <section>
+            <h2 data-i18n="projects">Proyectos</h2>
+            <div class="contact">
+              <a href="https://carrioneduca.edu.pe">Coedula</a>
+              <a href="https://faztore.com">Faztore</a>
+              <a href="#experience-heading">Aeduca</a>
+              <a href="https://github.com/eliaschampi" data-i18n="libraries"
+                >Bibliotecas de software</a
+              >
+            </div>
+          </section>
+          <section>
+            <h2 data-i18n="stack">Tecnologías actuales</h2>
+            <ul
+              class="stack"
+              aria-label="Tecnologías principales"
+              data-i18n-aria="stackLabel"
+            >
+              <li>Rust</li>
+              <li>PHP</li>
+              <li>Svelte</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </section>
+          <section>
+            <h2 data-i18n="focus">Especialidades</h2>
+            <p class="small">
+              <span data-i18n="focusInterfaces"
+                >Diseño y desarrollo de interfaces</span
+              ><br /><span data-i18n="focusSystems">Sistemas full-stack</span
+              ><br /><span data-i18n="focusLibraries"
+                >Bibliotecas de interfaz, Rust y OMR</span
+              ><br /><span data-i18n="focusEducation"
+                >Plataformas educativas</span
+              >
+            </p>
+          </section>
+          <section>
+            <h2 data-i18n="languages">Idiomas</h2>
+            <ul class="languages">
+              <li data-i18n="spanish">Español</li>
+              <li>Quechua <span data-i18n="native">· Nativo</span></li>
+              <li data-i18n="english">Inglés</li>
+            </ul>
+          </section>
+        </aside>
+        <main>
+          <section aria-labelledby="profile-heading">
+            <h2 id="profile-heading" data-i18n="profile">Perfil</h2>
+            <p class="intro" data-i18n="bio">
+              Desarrollador full-stack apasionado por las interfaces cuidadas y
+              los sistemas confiables. Más de siete años de experiencia en
+              tecnología institucional, integrando gestión escolar, aprendizaje
+              virtual y evaluación automatizada en un ecosistema digital.
+            </p>
+          </section>
+          <section aria-labelledby="experience-heading">
+            <h2 id="experience-heading" data-i18n="experience">Experiencia</h2>
+            <div class="entry">
+              <h3>Asociación Educativa Carrión · AEDUCA</h3>
+              <p class="position" data-i18n="aeducaRole">
+                Responsable de Área de Tecnología e Informática
+              </p>
+              <p class="date">
+                <time datetime="2018-04-19" data-i18n="aeducaStart"
+                  >19 de abril de 2018</time
+                >
+                –
+                <time datetime="2026-01-13" data-i18n="aeducaEnd"
+                  >13 de enero de 2026</time
+                >
+              </p>
+              <ul class="achievements">
+                <li data-i18n="achievementSchool">
+                  Diseñé e implementé el ecosistema de gestión escolar AEDUCA,
+                  integrando matrícula, tesorería, gestión académica y
+                  asistencia.
+                </li>
+                <li data-i18n="achievementLearning">
+                  Desarrollé una plataforma de clases virtuales, exámenes y
+                  comunicación en tiempo real; capacité a docentes y estudiantes
+                  durante 2020–2023.
+                </li>
+                <li data-i18n="achievementOmr">
+                  Desarrollé un sistema de calificación automatizada y lectura
+                  óptica de pruebas (OMR), con reportes estadísticos
+                  personalizados.
+                </li>
+                <li data-i18n="achievementSupport">
+                  Dirigí el soporte técnico institucional y el diseño
+                  audiovisual para admisiones y comunicaciones.
+                </li>
+              </ul>
+            </div>
+            <div class="entry">
+              <h3>ONPE · ODPE Cusco</h3>
+              <p class="position" data-i18n="onpeRole">
+                Responsable de Local de Votación
+              </p>
+              <p class="date" data-i18n="onpeDates">
+                4 de marzo–14 de abril de 2026 · 16 de mayo–9 de junio de 2026
+              </p>
+              <p class="small" data-i18n="onpeDetail">
+                Coordiné la operación del local, los materiales electorales, la
+                atención de incidencias y el apoyo al personal en procesos
+                electorales nacionales.
+              </p>
+            </div>
+          </section>
+          <section class="education" aria-labelledby="education-heading">
+            <h2 id="education-heading" data-i18n="education">
+              Educación y formación
+            </h2>
+            <div class="entry">
+              <h3>Instituto Tecnológico Wernher von Braun</h3>
+              <p class="position" data-i18n="degreeTitle">
+                Profesional Técnico en Computación e Informática
+              </p>
+              <p class="date" data-i18n="degreeDates">
+                Marzo de 2015–febrero de 2018
+              </p>
+            </div>
+            <div class="entry">
+              <h3>Silabuz · MTPE</h3>
+              <p class="position" data-i18n="bootcampTitle">
+                Capacitación Técnica · Bootcamp Desarrollador Back End
+              </p>
+              <p class="date" data-i18n="bootcampDates">
+                17 de octubre de 2022–7 de febrero de 2023 · 400 horas
+                pedagógicas
+              </p>
+              <p class="small" data-i18n="bootcampSubjects">
+                Python, JavaScript, bases de datos relacionales, Django,
+                Node.js, Express, AWS, pruebas de software e integración
+                continua.
+              </p>
+            </div>
+            <div class="entry">
+              <h3>Platzi English Academy</h3>
+              <p class="position" data-i18n="englishCourse">Inglés básico A1</p>
+              <p class="date" data-i18n="englishDate">
+                Completado el 24 de enero de 2026
+              </p>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer">
+        <span data-i18n="footer"
+          >Elias Champi Hancco · Desarrollador full-stack</span
+        >
+        <a href="https://eliaschampi.github.io">eliaschampi.github.io</a>
+      </footer>
+    </article>
+    <script>
+      (() => {
+        const copy = {
+          es: {
+            title: "Elias Champi Hancco — CV en español",
+            description:
+              "Elias Champi Hancco — desarrollador full-stack en Cusco, Perú. Interfaces, plataformas educativas y bibliotecas de software.",
+            cvActions: "Acciones del CV",
+            back: "Volver al portafolio",
+            languageControl: "Idioma del CV",
+            spanishControl: "Cambiar a español",
+            englishControl: "Cambiar a inglés",
+            print: "Imprimir / Guardar PDF",
+            cvLabel: "CV de Elias Champi Hancco",
+            role: "Desarrollador full-stack · Tecnología educativa",
+            location: "Cusco, Perú",
+            sidebarLabel: "Contacto, proyectos y habilidades",
+            contact: "Contacto",
+            projects: "Proyectos",
+            libraries: "Bibliotecas de software",
+            stack: "Tecnologías actuales",
+            stackLabel: "Tecnologías principales",
+            focus: "Especialidades",
+            focusInterfaces: "Diseño y desarrollo de interfaces",
+            focusSystems: "Sistemas full-stack",
+            focusLibraries: "Bibliotecas de interfaz, Rust y OMR",
+            focusEducation: "Plataformas educativas",
+            languages: "Idiomas",
+            spanish: "Español",
+            native: "· Nativo",
+            english: "Inglés",
+            profile: "Perfil",
+            bio: "Desarrollador full-stack apasionado por las interfaces cuidadas y los sistemas confiables. Más de siete años de experiencia en tecnología institucional, integrando gestión escolar, aprendizaje virtual y evaluación automatizada en un ecosistema digital.",
+            experience: "Experiencia",
+            aeducaRole: "Responsable de Área de Tecnología e Informática",
+            aeducaStart: "19 de abril de 2018",
+            aeducaEnd: "13 de enero de 2026",
+            achievementSchool:
+              "Diseñé e implementé el ecosistema de gestión escolar AEDUCA, integrando matrícula, tesorería, gestión académica y asistencia.",
+            achievementLearning:
+              "Desarrollé una plataforma de clases virtuales, exámenes y comunicación en tiempo real; capacité a docentes y estudiantes durante 2020–2023.",
+            achievementOmr:
+              "Desarrollé un sistema de calificación automatizada y lectura óptica de pruebas (OMR), con reportes estadísticos personalizados.",
+            achievementSupport:
+              "Dirigí el soporte técnico institucional y el diseño audiovisual para admisiones y comunicaciones.",
+            onpeRole: "Responsable de Local de Votación",
+            onpeDates:
+              "4 de marzo–14 de abril de 2026 · 16 de mayo–9 de junio de 2026",
+            onpeDetail:
+              "Coordiné la operación del local, los materiales electorales, la atención de incidencias y el apoyo al personal en procesos electorales nacionales.",
+            education: "Educación y formación",
+            degreeTitle: "Profesional Técnico en Computación e Informática",
+            bootcampTitle:
+              "Capacitación Técnica · Bootcamp Desarrollador Back End",
+            degreeDates: "Marzo de 2015–febrero de 2018",
+            bootcampDates:
+              "17 de octubre de 2022–7 de febrero de 2023 · 400 horas pedagógicas",
+            bootcampSubjects:
+              "Python, JavaScript, bases de datos relacionales, Django, Node.js, Express, AWS, pruebas de software e integración continua.",
+            englishCourse: "Inglés básico A1",
+            englishDate: "Completado el 24 de enero de 2026",
+            footer: "Elias Champi Hancco · Desarrollador full-stack",
+          },
+          en: {
+            title: "Elias Champi Hancco — English CV",
+            description:
+              "Elias Champi Hancco — full-stack developer in Cusco, Peru. Interfaces, educational platforms, and software libraries.",
+            cvActions: "CV actions",
+            back: "Back to portfolio",
+            languageControl: "CV language",
+            spanishControl: "Switch to Spanish",
+            englishControl: "Switch to English",
+            print: "Print / Save PDF",
+            cvLabel: "CV of Elias Champi Hancco",
+            role: "Full-stack developer · Educational technology",
+            location: "Cusco, Peru",
+            sidebarLabel: "Contact, projects, and skills",
+            contact: "Contact",
+            projects: "Projects",
+            libraries: "Software libraries",
+            stack: "Current stack",
+            stackLabel: "Core technologies",
+            focus: "Focus",
+            focusInterfaces: "Interface design & development",
+            focusSystems: "Full-stack systems",
+            focusLibraries: "UI, Rust, and OMR libraries",
+            focusEducation: "Educational platforms",
+            languages: "Languages",
+            spanish: "Spanish",
+            native: "· Native",
+            english: "English",
+            profile: "Profile",
+            bio: "Full-stack developer with a love for thoughtful interfaces and dependable systems. More than seven years of institutional technology experience, bringing school operations, virtual learning, and automated assessment into a connected digital ecosystem.",
+            experience: "Experience",
+            aeducaRole: "Technology & IT Lead",
+            aeducaStart: "19 April 2018",
+            aeducaEnd: "13 January 2026",
+            achievementSchool:
+              "Designed and implemented the AEDUCA school-management ecosystem, integrating enrollment, treasury, academics, and attendance.",
+            achievementLearning:
+              "Built a virtual learning platform with online classes, examinations, and real-time communication; trained teachers and students during 2020–2023.",
+            achievementOmr:
+              "Developed automated grading and optical mark recognition (OMR) for examinations, with customized statistical reporting.",
+            achievementSupport:
+              "Led institutional technical support and audiovisual design for admissions and communications.",
+            onpeRole: "Polling Venue Lead",
+            onpeDates: "4 March–14 April 2026 · 16 May–9 June 2026",
+            onpeDetail:
+              "Coordinated venue operations, electoral materials, incident handling, and staff support for national election processes.",
+            education: "Education & training",
+            degreeTitle:
+              "Professional Technical Qualification in Computing & Informatics",
+            bootcampTitle: "Technical Training · Backend Developer Bootcamp",
+            degreeDates: "March 2015–February 2018",
+            bootcampDates:
+              "17 October 2022–7 February 2023 · 400 pedagogical hours",
+            bootcampSubjects:
+              "Python, JavaScript, relational databases, Django, Node.js, Express, AWS, software testing, and continuous integration.",
+            englishCourse: "Basic English A1",
+            englishDate: "Completed 24 January 2026",
+            footer: "Elias Champi Hancco · Full-stack developer",
+          },
+        };
+        const preferenceKey = "elias-language";
+        const isLanguage = (value) => value === "es" || value === "en";
+        const requested = new URLSearchParams(window.location.search).get(
+          "lang",
+        );
+        let saved;
+        try {
+          saved = localStorage.getItem(preferenceKey);
+        } catch {
+          /* Storage may be disabled. */
+        }
+        const applyLanguage = (language) => {
+          const text = copy[language];
+          document.documentElement.lang = language;
+          document.title = text.title;
+          document.querySelector('meta[name="description"]').content =
+            text.description;
+          document.querySelectorAll("[data-i18n]").forEach((element) => {
+            element.textContent = text[element.dataset.i18n];
+          });
+          document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+            element.setAttribute("aria-label", text[element.dataset.i18nAria]);
+          });
+          document.querySelectorAll("[data-language]").forEach((button) => {
+            button.setAttribute(
+              "aria-pressed",
+              String(button.dataset.language === language),
+            );
+          });
+          document.getElementById("back-portfolio").href =
+            `./index.html?lang=${language}`;
+          try {
+            localStorage.setItem(preferenceKey, language);
+          } catch {
+            /* The page works without storage. */
+          }
+        };
+        document.querySelectorAll("[data-language]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const language = button.dataset.language;
+            applyLanguage(language);
+            const url = new URL(window.location.href);
+            url.searchParams.set("lang", language);
+            window.history.replaceState(null, "", url);
+          });
+        });
+        document
+          .getElementById("print-cv")
+          .addEventListener("click", () => window.print());
+        applyLanguage(
+          isLanguage(requested) ? requested : isLanguage(saved) ? saved : "es",
+        );
+      })();
+    </script>
+  </body>
+</html>
