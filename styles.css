@@ -1572,7 +1572,7 @@ section h2 {
     color: #59624d;
   }
   .section-kicker > span:last-child {
-    font-size: 6px;
+    font-size: inherit;
   }
   .section-heading {
     display: block;
@@ -1583,7 +1583,7 @@ section h2 {
   }
   .section-heading .text-link {
     margin-top: 20px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .project-filters {
     gap: 8px;
